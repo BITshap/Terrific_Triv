@@ -12,7 +12,8 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     lastPlayed: { type: Date },
-    lastLLogin: { type: Date }
+    lastLLogin: { type: Date },
+    scores: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Score' } ]
 })
 
 // export
