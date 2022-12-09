@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     lastPlayed: { type: Date },
-    lastLLogin: { type: Date }
+    lastLogin: { type: Date }
 })
 
 // export
