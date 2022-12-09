@@ -11,5 +11,5 @@ mongoose.connect(process.env.MONGO_URI, {
 // export schemas
 module.exports.Category = require('./category')
 module.exports.Question = require('./question')
-module.exports.Score = require('./score')
+module.exports.Session = require('./session')
 module.exports.User = require('./user')
