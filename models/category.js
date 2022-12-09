@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 
 // schema
 const categorySchema = mongoose.Schema({
-    collectionId: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' },
+    questions: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Question' } ],
     name: { type: String, required: true },
     type: { type: Number }
 })
