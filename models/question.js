@@ -3,14 +3,13 @@ const mongoose = require('mongoose')
 
 // schema
 const questionSchema = mongoose.Schema({
-    categoryId: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' },
     question: { type: String, required: true },
     correctAnswer: { type: String, required: true },
     incorrectAnsers: [ { type: String } ]
 })
 
 // methods
-questionSchema.methods.genAnswerOrder = function(){
+questionSchema.methods.genAnswerOrder = function() {
     // create array of all answer options
     let answerArray = [this.correctAnswer, ...this.incorrectAnswers]
     
@@ -28,4 +27,5 @@ questionSchema.methods.genAnswerOrder = function(){
     return answerArray
 }
 
+// export
 module.exports = mongoose.Model('Question', questionSchema)
