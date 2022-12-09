@@ -1,18 +1,22 @@
 const db = require('../models')
 
 db.Question.create([{
-  questions: 'H-Thai-ML',
-  correctAnswer: 'Seattle',
-  incorrectAnsers: 'WA',
-  incorrectAnsers: 'Thai, Pan-Asian',
-  incorrectAnsers: '/images/thai-food.jpg'
+  questions: 'What is the phospholipid bilayer with embedded protiens that surrounds every cell?',
+  correctAnswer: 'Cell membrane',
+  incorrectAnsers: [ 
+    'Cell wall',
+   'Cholesterol',
+   'Osmosis'
+]
 },
 {
-  questions: 'H-Thai-ML',
-  correctAnswer: 'Seattle',
-  incorrectAnsers: 'WA',
-  incorrectAnsers: 'Thai, Pan-Asian',
-  incorrectAnsers: '/images/thai-food.jpg'
+  questions: 'What is the medical term for a muscle cell also known as a muscle fiber?',
+  correctAnswer: 'Myocyte',
+  incorrectAnsers: [ 
+    'Oocyte',
+   'Neuron',
+   'Steriod'
+]
 }])
   .then(() => {
     console.log('Seed Success!')
