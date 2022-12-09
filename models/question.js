@@ -6,7 +6,7 @@ const questionSchema = mongoose.Schema({
     categoryId: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' },
     question: { type: String, required: true },
     correctAnswer: { type: String, required: true },
-    incorrectAnsers: [ { type: String } ]
+    incorrectAnswers: [ { type: String } ]
 })
 
 // methods
