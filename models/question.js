@@ -12,7 +12,7 @@ const questionSchema = mongoose.Schema({
 // methods
 questionSchema.methods.genAnswerOrder = function(){
     // create array of all answer options
-    let answerArray = [this.correctAnswer, ...this.incorrectAnsers]
+    let answerArray = [this.correctAnswer, ...this.incorrectAnswers]
     
     // shuffle answerArray
     let currentIndex = answerArray.length
