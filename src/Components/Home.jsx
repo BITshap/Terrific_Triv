@@ -1,15 +1,15 @@
-const React = require('react')
-const user = require('../../backend/models/user')
-
+import Button from 'react-bootstrap/Button'
 import Category from './Category'
+
 
 const Home = (user) => {
     return (
-        <div className="Home-Page">
+        <div className="container">
+            <div className="mx-auto, text-center">
             <h1>Weclome {user.firstName} to Terrific Trivia!</h1>
-            <h3>Be Prepared for some Terrificly Tricky Questions</h3>
+            <h3>Be Prepared for some Terrifically Tricky Questions</h3>
             <div className="User-Data-Wrapper">
-                <h1>Your Stats</h1>
+                <h2>Your Stats</h2>
                 <h1>{user.firstName} + {user.lastName}</h1>
                 <h2>{user.email}</h2>
                 <h2>{user.age}</h2>
@@ -23,7 +23,9 @@ const Home = (user) => {
                 */}
             <div>
                 <Category />
+                <Button>Start your Quiz!</Button>
             </div>          
+        </div>
         </div>
     )  
 }
