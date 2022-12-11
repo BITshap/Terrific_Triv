@@ -1,9 +1,11 @@
 import Button from 'react-bootstrap/Button'
 import Category from './Category'
+import Quiz from './Quiz'
 
 const Home = (user) => {
     return (
-        <div className="Home-Page">
+        <div className="container">
+            <div className="mx-auto, text-center">
             <h1>Weclome {user.firstName} to Terrific Trivia!</h1>
             <h3>Be Prepared for some Terrifically Tricky Questions</h3>
             <div className="User-Data-Wrapper">
@@ -21,8 +23,12 @@ const Home = (user) => {
                 */}
             <div>
                 <Category />
-                <Button>Start your Quiz!</Button>
-            </div>          
+                
+                <Button>Start your Quiz!</Button>   
+                
+                
+            </div>
+            </div>       
         </div>
     )  
 }
