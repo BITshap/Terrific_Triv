@@ -4,6 +4,7 @@
     AS QUESTIONS WILL BE ACCESSED THROUGH CATEGORIES
 */
 
+// dependencies
 const router = require('express').Router()
 const Question = require('../models/question')
 
