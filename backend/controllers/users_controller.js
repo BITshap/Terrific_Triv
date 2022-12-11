@@ -1,12 +1,11 @@
 // dependencies
 const router = require('express').Router()
-const User = require('../models/user')
-const Session = require('../models/session')
+const db = require('../models')
 
 // GET /users
 // sends all users
 router.get('/', (req, res) => {
-    User.find()
+    db.User.find()
         .then(foundUsers => {
             res.status(200).send(JSON.stringify(foundUsers))
         })
@@ -18,7 +17,7 @@ router.get('/', (req, res) => {
 // GET /users/:id
 // sends user with matching id
 router.get('/:id', (req, res) => {
-    User.findById(req.params.id)
+    db.User.findById(req.params.id)
         .populate('sessions')
         .then(foundUser => {
             res.status(200).send(JSON.stringify(foundUser))
@@ -31,7 +30,7 @@ router.get('/:id', (req, res) => {
 // POST /users
 // creates a new user
 router.post('/', (req, res) => {
-    User.create(req.body)
+    db.User.create(req.body)
         .then(() => {
             res.status(200).send('New user succesfully created')
         })
@@ -52,7 +51,7 @@ router.post('/', (req, res) => {
 // PUT /users/:id
 // updates a user with matching id
 router.put('/:id', (req, res) => {
-    User.findByIdAndUpdate(req.params.id, req.body)
+    db.User.findByIdAndUpdate(req.params.id, req.body)
         .then( () => {
             res.status(200).send(`User ${req.params.id} successfully updated`)
         })
@@ -64,7 +63,7 @@ router.put('/:id', (req, res) => {
 // DELETE /users/:id
 // deletes a user with matching id
 router.delete('/:id', (req, res) => {
-    User.findByIdAndDelete(req.params.id)
+    db.User.findByIdAndDelete(req.params.id)
         .then(() => {
             res.status(200).send(`User ${req.params.id} successfully deleted`)
         })
@@ -78,7 +77,7 @@ router.delete('/:id', (req, res) => {
 // GET /users/:id/sessions/:sessionId
 // sends session with matching id from user with matching id
 router.get('/:id/sessions/:sessionId', (req, res) => {
-    Session.findById(req.params.sessionId)
+    db.Session.findById(req.params.sessionId)
         .then(foundSession => {
             res.status(200).send(JSON.stringify(foundSession))
         })
@@ -90,9 +89,9 @@ router.get('/:id/sessions/:sessionId', (req, res) => {
 // POST /users/:id/sessions
 // creates a new session for a specific user
 router.post('/:id/sessions', (req, res) => {
-    User.findById(req.params.id)
+    db.User.findById(req.params.id)
         .then(user => {
-            Session.create(req.body)
+            db.Session.create(req.body)
                 .then(session => {
                     user.sessions.push(session.id)
                     user.save()
@@ -112,7 +111,7 @@ router.post('/:id/sessions', (req, res) => {
 // DELETE /users/:id/sessions/:sessionId
 // deletes a session from a user's sessions
 router.delete('/:id/sessions/:sessionId', (req, res) => {
-    Session.findByIdAndDelete(req.params.sessionId)
+    db.Session.findByIdAndDelete(req.params.sessionId)
         .then(() => {
             res.status(200).send(`Session ${req.params.sessionId} successfully deleted from user ${req.params.id}`)
         })

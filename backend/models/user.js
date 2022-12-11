@@ -15,6 +15,7 @@ const userSchema = new mongoose.Schema({
     },
     lastPlayed: { type: Date },
     lastLogin: { type: Date },
+    overallGrade: { type: String },
     sessions: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Session' } ]
 })
 
