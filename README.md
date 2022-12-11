@@ -36,6 +36,13 @@ When a session is submited after answers are selected, a new session is created 
 | PUT    | /categories/:id/questions/:questoinId | Update specific question of specific category |
 | DELETE | /categories/:id/questions/:questoinId | Delete specific question of specific category |
 
+## Data Model Referance
+|  Category | ObjectId                                   | QuestionId       | 
+|:---------:|:------------------------------------------:|:-----------------|
+|  Anatomy  |    ObjectId("63960b51cd6b86a544c3a509")    | Array of Strings |
+|  Biology  |    ObjectId("63960b7dcd6b86a544c3a50a")    | Array of Strings |
+| Chemistry |    ObjectId("63960b9ccd6b86a544c3a50b")    | Array of Strings |
+
 ## Schema Outlines
 
 ### Users
@@ -54,9 +61,9 @@ When a session is submited after answers are selected, a new session is created 
 | Question ObjectId | String   | String        | String         | Boolean   |
 
 ### Categories
-| questions                   | name   | type   |
-|:----------------------------|:-------|:-------|
-| Array of Question ObjectIds | String | Number |
+| name   | QuestionId       | 
+|:-------|:-----------------|
+| String | Array of Strings |
 
 ### Questions
 | question | correctAnswer | incorrectAnswers | 

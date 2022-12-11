@@ -1,9 +1,17 @@
-
 //import Button from 'react-bootstrap/Button'
 import { Link } from "react-router-dom";
-
+import React, { useState } from "react";
+import Button from 'react-bootstrap/Button'
+import Category from './Category'
+import Login from "./Login"
+import Register from "./Register"
 
 const Home = (user) => {
+    const [currentForm, setCurrentForm] = useState('login');
+    const toggleForm = (formName) => {
+        setCurrentForm(formName);
+    }
+
     return (
         <div className="container">
             <div className="mx-auto, text-center">
@@ -21,9 +29,18 @@ const Home = (user) => {
                         </li>
                     </ul>
                 </nav>
+                <div>
+                    <div>
+                    {
+                        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm}/>
+                    }
+                    </div>
+                    <Category />
+                    <Button>Start your Quiz!</Button>
+                </div>
             </div>
         </div>
-    )  
+    )
 }
 
 export default Home
