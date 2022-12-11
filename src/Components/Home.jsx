@@ -21,12 +21,12 @@ const Home = (user) => {
                     <ul>
                         <li>
                         <Link to="/YourData">
-                            <Button className="linky-button">Your Data</Button>
+                            <Button id="data" className="linky-button glow-on-hover glow-on-hover:before glow-on-hover:active glow-on-hover:active:after glow-on-hover:hover:before glow-on-hover:after glowing">Your Data</Button>
                             </Link>
                         </li>
                         <li>
                         <Link to="/Category">
-                            <Button className="linky-button">
+                            <Button id="category" className="linky-button glow-on-hover glow-on-hover:before glow-on-hover:active glow-on-hover:active:after glow-on-hover:hover:before glow-on-hover:after glowing">
                             Categories
                                 </Button></Link>
                         </li>
