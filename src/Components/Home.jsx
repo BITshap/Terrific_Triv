@@ -1,5 +1,5 @@
 const React = require('react')
-const user = require('../../models/user')
+const user = require('../../backend/models/user')
 
 import Category from './Category'
 

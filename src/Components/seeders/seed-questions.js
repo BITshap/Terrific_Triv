@@ -1,4 +1,4 @@
-const db = require('../models')
+const db = require('../../../backend/models')
 
 db.Question.create([{
   questions: 'What is the phospholipid bilayer with embedded protiens that surrounds every cell?',

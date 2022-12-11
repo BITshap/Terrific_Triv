@@ -1,19 +1,23 @@
 // dependencies
 const mongoose = require('mongoose')
 
-// schema
+// the question collection holds information for individual questions, 
+// alongside the categories they belong to
 const questionSchema = mongoose.Schema({
     question: { type: String, required: true },
     correctAnswer: { type: String, required: true },
-    incorrectAnsers: [ { type: String } ]
+    incorrectAnsers: [ { type: String } ],
+    category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' }
 })
 
 // methods
+
+// method to generate random order for answer options to be displayed, returns an array of strings
 questionSchema.methods.genAnswerOrder = function() {
     // create array of all answer options
     let answerArray = [this.correctAnswer, ...this.incorrectAnswers]
     
-    // shuffle answerArray
+    // shuffle answerArray using Frisher-Yates method
     let currentIndex = answerArray.length
     let randomIndex
 
@@ -28,4 +32,4 @@ questionSchema.methods.genAnswerOrder = function() {
 }
 
 // export
-module.exports = mongoose.Model('Question', questionSchema)
+module.exports = mongoose.model('Question', questionSchema)
