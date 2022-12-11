@@ -31,7 +31,7 @@ router.get('/:id', (req, res) => {
 // POST /categories
 // creates new category
 router.post('/', (req, res) => {
-    Category.create()
+    Category.create(req.body)
         .then(() => {
             res.status(200).send('New category successfully created')
         })
