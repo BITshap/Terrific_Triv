@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button'
 import Category from './Category'
-import Quiz from './Quiz'
+
 
 const Home = (user) => {
     return (
