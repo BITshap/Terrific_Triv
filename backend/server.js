@@ -6,7 +6,9 @@ const app = express()
 
 
 // controllers
+app.use('/users', require('./controllers/users_controller'))
 app.use('/questions', require('./controllers/questions_controller'))
+app.use('/categories', require('./controllers/categories_controller'))
 
 // routes
 app.get('/', (req, res) => {
