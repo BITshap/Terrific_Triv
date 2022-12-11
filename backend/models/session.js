@@ -6,7 +6,7 @@ const sessionSchema = mongoose.Schema({
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     questions: [
         {
-            questionId: { type: mongoose.Schema.Types.ObjectId },
+            questionId: { type: mongoose.Schema.Types.ObjectId, ref: 'Question' },
             question: { type: String },
             correctAnswer: { type: String },
             selectedAnswer: { type: String },

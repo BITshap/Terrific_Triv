@@ -1,3 +1,9 @@
+
+/*
+    NOTE: IF CATEGORIES NOT USED,
+    THIS FILE IS OBSOLETE
+*/
+
 const router = require('express').Router()
 const Category = require('../models/category')
 
