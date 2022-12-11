@@ -1,5 +1,5 @@
 const React = require('react')
-const category = require('../../models/category')
+const category = require('../../backend/models/category')
 
 const Category = (category) => {
     return (
