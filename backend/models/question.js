@@ -6,12 +6,8 @@ const mongoose = require('mongoose')
 const questionSchema = mongoose.Schema({
     question: { type: String, required: true },
     correctAnswer: { type: String, required: true },
-<<<<<<< HEAD:models/question.js
-    incorrectAnswers: [ { type: String } ]
-=======
-    incorrectAnsers: [ { type: String } ],
+    incorrectAnswers: [ { type: String } ],
     category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' }
->>>>>>> 4532f1f5c06a8ca1ec7fcdef755e58d8e15b5199:backend/models/question.js
 })
 
 // methods
