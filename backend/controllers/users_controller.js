@@ -90,7 +90,7 @@ router.get('/:id/sessions/:sessionId', (req, res) => {
 // POST /users/:id/sessions
 // creates a new session for a specific user
 router.post('/:id/sessions', (req, res) => {
-    User.create(req.params.id)
+    User.findById(req.params.id)
         .then(user => {
             Session.create(req.body)
                 .then(session => {
