@@ -1,7 +1,9 @@
-const React = require('react')
-const Quizz = require('../../models/user')
-
-const Quiz = (Quizz) => {
-    
-
+const Quiz = () => {
+    return (
+        <div>
+            <p>Quizes</p>
+        </div>
+    )
 }
+
+export default Quiz
