@@ -1,6 +1,7 @@
 const db = require('../models')
 
 db.Question.create([{
+  
   questions: 'What is the phospholipid bilayer with embedded protiens that surrounds every cell?',
   correctAnswer: 'Cell membrane',
   incorrectAnsers: [ 
@@ -172,6 +173,8 @@ incorrectAnsers: [
 ]
 }])
   .then(() => {
+    db.Categories.update({name: "Biology"}, {$push: {questionsId: "63960b7dcd6b86a544c3a50a" }});
+
     console.log('Seed Success!')
     process.exit()
   })
