@@ -1,13 +1,11 @@
 // dependencies
 const path = require('path')
-require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
+require('dotenv').config({ path: path.resolve(__dirname, './.env') })
 const express = require('express')
 const app = express()
 
-
 // controllers
 app.use('/users', require('./controllers/users_controller'))
-app.use('/questions', require('./controllers/questions_controller'))
 app.use('/categories', require('./controllers/categories_controller'))
 
 // routes

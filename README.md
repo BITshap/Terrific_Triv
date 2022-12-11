@@ -46,9 +46,9 @@ When a session is submited after answers are selected, a new session is created 
 ## Schema Outlines
 
 ### Users
-| firstName | lastName | email  | password | age    | lastPlayed | lastLogin | sessions                   |
-|:----------|:---------|:-------|:---------|:-------|:-----------|:----------|:---------------------------|
-| String    | String   | String | String   | Number | Date       | Date      | Array of Session ObjectIds |
+| firstName | lastName | email  | password | age    | lastPlayed | lastLogin | sessions                   | overallGrade |
+|:----------|:---------|:-------|:---------|:-------|:-----------|:----------|:---------------------------|:-------------|
+| String    | String   | String | String   | Number | Date       | Date      | Array of Session ObjectIds | String       |
 
 ### Sessions
 | user          | questions        | score               | date |
@@ -61,9 +61,9 @@ When a session is submited after answers are selected, a new session is created 
 | Question ObjectId | String   | String        | String         | Boolean   |
 
 ### Categories
-| name   | QuestionId       | 
-|:-------|:-----------------|
-| String | Array of Strings |
+| name   | QuestionId                  | 
+|:-------|:----------------------------|
+| String | Array of Question ObjectIds |
 
 ### Questions
 | question | correctAnswer | incorrectAnswers | 
