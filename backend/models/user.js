@@ -1,7 +1,8 @@
 // dependencies
 const mongoose = require('mongoose')
 
-// schema
+// the user collection holds information about users, 
+// alongside their session histories
 const userSchema = new mongoose.Schema({
     firstName: { type: String, required: true },
     lastName: { type: String },
