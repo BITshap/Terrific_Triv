@@ -14,6 +14,7 @@ When a session is submited after answers are selected, a new session is created 
 | Method | Path                                  | Purpose                                       |
 |:-------|:--------------------------------------|:----------------------------------------------|
 | GET    | /                                     | Welcome message                               |
+|        | **USERS**                             |                                               |
 | GET    | /users                                | Find all users                                |
 | GET    | /users/:id                            | Find specific user                            |
 | POST   | /users                                | Create new user                               |
@@ -23,6 +24,7 @@ When a session is submited after answers are selected, a new session is created 
 | GET    | /users/:id/sessions/:sessionId        | Get specific session of specific user         |
 | POST   | /users/:id/sessions                   | Create new session of specific user           |
 | DELETE | /users/:id/sessions/:sessionId        | Delete specific session of specific user      |
+|        | **CATEGORIES**                        |                                               |
 | GET    | /categories                           | Find all categories                           |
 | GET    | /categories/:id                       | Find specific category                        |
 | POST   | /categories                           | Create new category                           |
