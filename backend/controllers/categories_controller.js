@@ -1,9 +1,3 @@
-
-/*
-    NOTE: IF CATEGORIES NOT USED,
-    THIS FILE IS OBSOLETE
-*/
-
 // dependencies
 const router = require('express').Router()
 const Category = require('../models/category')

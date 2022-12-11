@@ -5,8 +5,7 @@ const mongoose = require('mongoose')
 // alongside an array containing the questions that belong to them
 const categorySchema = mongoose.Schema({
     questions: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Question' } ],
-    name: { type: String, required: true },
-    type: { type: Number }
+    name: { type: String, required: true }
 })
 
 // export
