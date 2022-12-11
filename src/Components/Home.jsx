@@ -13,30 +13,33 @@ const Home = (user) => {
     }
 
     return (
-        <div className="container">
-            <div className="mx-auto, text-center">
+        <div className="wrapper">
+            <div className="container display:flex justify-content-center margin:auto text-align-center">
             <h1>Welcome {user.firstName} to Terrific Trivia!</h1>
-            <h3>Be Prepared for some Terrifically Tricky Questions</h3>       
-            </div>
-            <div>
-                <nav>
+            <h3>Be Prepared for some Terrifically Tricky Questions</h3>
+            <nav>
                     <ul>
                         <li>
-                        <Link to="/YourData">Your Data</Link>
+                        <Link to="/YourData">
+                            <Button className="linky-button">Your Data</Button>
+                            </Link>
                         </li>
                         <li>
-                        <Link to="/Category">Categories</Link>
+                        <Link to="/Category">
+                            <Button className="linky-button">
+                            Categories
+                                </Button></Link>
                         </li>
                     </ul>
-                </nav>
+                </nav>       
+            </div>
+            <div>
                 <div>
                     <div>
                     {
                         currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm}/>
                     }
                     </div>
-                    <Category />
-                    <Button>Start your Quiz!</Button>
                 </div>
             </div>
         </div>
