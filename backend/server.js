@@ -19,6 +19,7 @@ app.get('*', (req, res) => {
     res.status(404).send('Error 404: Not Found')
 })
 
+// listen for connection to server
 app.listen(process.env.BACKEND_PORT, () => {
     console.log(`Server listening on ${process.env.BACKEND_PORT}`)
 })
