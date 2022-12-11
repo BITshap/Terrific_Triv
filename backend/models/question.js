@@ -28,4 +28,4 @@ questionSchema.methods.genAnswerOrder = function() {
 }
 
 // export
-module.exports = mongoose.Model('Question', questionSchema)
+module.exports = mongoose.model('Question', questionSchema)
