@@ -16,6 +16,16 @@ router.get('/', (req, res) => {
 
 // GET /users/:id
 // sends user with matching id
-
+router.get('/:id', (req, res) => {
+    User.findById(req.params.id)
+        .populate('sessions')
+        .then(foundUser => {
+            res.status(200).send(foundUser)
+        })
+        .catch(err => {
+            console.log(err)
+            res.status(404).send(err)
+        })
+})
 
 module.exports = router
