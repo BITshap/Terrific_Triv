@@ -1,3 +1,9 @@
+
+/* 
+    NOTE: IF CATEGORIES USED THIS WILL BE OBSOLETE
+    AS QUESTIONS WILL BE ACCESSED THROUGH CATEGORIES
+*/
+
 const router = require('express').Router()
 const Question = require('../models/question')
 
@@ -24,5 +30,14 @@ router.get('/:id', (req, res) => {
             res.status(404).send(err)
         })
 })
+
+// POST /questions
+// creates new question
+
+// PUT /questions/:id
+// updates question with matching id
+
+// DELET /questions/:id
+// deletes question with matching id
 
 module.exports = router

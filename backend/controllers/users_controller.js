@@ -74,6 +74,18 @@ router.delete('/:id', (req, res) => {
 
 // sesssions controllers
 
+// GET /users/:id/sessions/:sessionId
+// sends session with matching id from user with matching id
+router.get('/:id/sessions/:sessionId', (req, res) => {
+    Session.findById(req.params.sessionId)
+        .then(foundSession => {
+            res.status(200).send(JSON.stringify(foundSession))
+        })
+        .catch(err => {
+            res.status(404).send(err)
+        })
+})
+
 // POST /users/:id/sessions
 // creates a new session for a specific user
 router.post('/:id/sessions', (req, res) => {
