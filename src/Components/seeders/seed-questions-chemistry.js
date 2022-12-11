@@ -129,12 +129,12 @@ db.Question.create([{
 },
 
 {
-    questions: 'What is the medical term for a muscle cell also known as a muscle fiber?',
-    correctAnswer: 'Myocyte',
+    questions: 'What is the word for everything that is, ever has been, or ever will be?',
+    correctAnswer: 'Cosmos',
     incorrectAnsers: [ 
-      'Oocyte',
-     'Neuron',
-     'Steriod'
+      'Me',
+     'My life',
+     'My social media'
   ]
   }])
     .then(() => {
