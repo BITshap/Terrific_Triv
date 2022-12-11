@@ -37,7 +37,11 @@ router.get('/:id', (req, res) => {
 // POST /categories
 // creates new category
 router.post('/', (req, res) => {
+<<<<<<< HEAD
     Category.create()
+=======
+    Category.create(req.body)
+>>>>>>> f1f194107c4dcb852e227f2d4d37ea7f58e93903
         .then(() => {
             res.status(200).send('New category successfully created')
         })
@@ -80,7 +84,10 @@ router.delete('/:id', (req, res) => {
 })
 
 // questions controllers (if categories used)
+<<<<<<< HEAD
 
+=======
+>>>>>>> f1f194107c4dcb852e227f2d4d37ea7f58e93903
 // GET /categories/:id/questions
 // sends all questions of category with matching id
 router.get('/:id/questions', (req, res) => {

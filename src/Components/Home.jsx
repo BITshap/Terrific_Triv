@@ -1,8 +1,21 @@
+<<<<<<< HEAD
+=======
+//import Button from 'react-bootstrap/Button'
+import { Link } from "react-router-dom";
+import React, { useState } from "react";
+>>>>>>> f1f194107c4dcb852e227f2d4d37ea7f58e93903
 import Button from 'react-bootstrap/Button'
 import Category from './Category'
+import Login from "./Login"
+import Register from "./Register"
 
 
 const Home = (user) => {
+    const [currentForm, setCurrentForm] = useState('login');
+    const toggleForm = (formName) => {
+        setCurrentForm(formName);
+    }
+
     return (
         <div className="container">
             <div className="mx-auto, text-center">
@@ -15,12 +28,9 @@ const Home = (user) => {
                 <h2>{user.age}</h2>
                 <h2>{user.lastPlayed}</h2>
                 <h2>{user.lastLogin}</h2>
+            <h1>Welcome {user.firstName} to Terrific Trivia!</h1>
+            <h3>Be Prepared for some Terrifically Tricky Questions</h3>       
             </div>
-                {/*
-                possible boolean where if time between CURRENT DATE 
-                and user.lastPlayed is >= 1 week display
-                "user.firstName are you tired of being terrific?!"
-                */}
             <div>
                 <Category />
                 <Button>Start your Quiz!</Button>
@@ -28,6 +38,29 @@ const Home = (user) => {
         </div>
         </div>
     )  
+                <nav>
+                    <ul>
+                        <li>
+                        <Link to="/YourData">Your Data</Link>
+                        </li>
+                        <li>
+                        <Link to="/Category">Categories</Link>
+                        </li>
+                    </ul>
+                </nav>
+                <div>
+                    <div>
+                    {
+                        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm}/>
+                    }
+                    </div>
+                    <Category />
+                    <Button>Start your Quiz!</Button>
+                </div>
+    
+    
+        </div>
+    
 }
 
 export default Home
