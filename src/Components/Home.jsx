@@ -1,10 +1,10 @@
-//import Button from 'react-bootstrap/Button'
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button'
 import Category from './Category'
 import Login from "./Login"
 import Register from "./Register"
+
 
 const Home = (user) => {
     const [currentForm, setCurrentForm] = useState('login');
@@ -41,9 +41,7 @@ const Home = (user) => {
                     }
                     </div>
                 </div>
-            </div>
         </div>
-    )
-}
+)}
 
 export default Home

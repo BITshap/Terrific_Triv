@@ -1,3 +1,4 @@
+
 .App {
     text-align: center;
     display: flex;
@@ -72,8 +73,6 @@
     transform: scale(1.2);
     transition-duration: 0.5s;
   }
-
-  
   
   .link-btn {
     background: none;
@@ -162,5 +161,3 @@
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
-
- 

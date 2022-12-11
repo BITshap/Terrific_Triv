@@ -1,3 +1,9 @@
+
+/*
+    NOTE: IF CATEGORIES NOT USED,
+    THIS FILE IS OBSOLETE
+*/
+
 // dependencies
 const router = require('express').Router()
 const db = require('../models')
