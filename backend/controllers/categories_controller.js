@@ -139,8 +139,26 @@ router.post('/:id/questions', (req, res) => {
 
 // PUT /category/:id/questions/:questionId
 // updates question with matching id in category with matching id
+router.put('/:id/questions/:questionId', (req, res) => {
+    Question.findByIdAndUpdate(req.params.questionId, req.body)
+        .then(() => {
+            res.status(200).send(`Successfully updated question ${req.params.questionId} from category ${req.params.id}`)
+        })
+        .catch(err => {
+            res.status(404).send(err)
+        })
+})
 
 // DELETE /category/:id/questions/:questionId
 // deletes question with matching id from category with matching id
+router.delete('/:id/questions/:questionId', (req, res) => {
+    Question.findByIdAndDelete(req.params.questionId)
+        .then(() => {
+            res.status(200).send(`Successfully deleted question ${req.params.questionId} from category ${req.params.id}`)
+        })
+        .catch(err => {
+            res.status(404).send(err)
+        })
+})
 
 module.exports = router
