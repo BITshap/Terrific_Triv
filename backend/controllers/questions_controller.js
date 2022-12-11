@@ -1,13 +1,12 @@
-const question = require('../models/question')
-
 const router = require('express').Router()
-const Question = require('../models').Question
+const Question = require('../models/question')
 
 // GET /questions
+// sends all questions
 router.get('/', (req, res) => {
     Question.find()
         .then(foundQuestions => {
-            res.send(JSON.stringify(foundQuestions))
+            res.status(200).send(JSON.stringify(foundQuestions))
         })
         .catch(err => {
             console.log(err)
@@ -16,10 +15,11 @@ router.get('/', (req, res) => {
     })
 
 // GET /questions/:id
+// sends question with matching id
 router.get('/:id', (req, res) => {
     Question.findById(req.params.id)
         .then(foundQuestion => {
-            res.send(JSON.stringify(foundQuestion))
+            res.status(200).send(JSON.stringify(foundQuestion))
         })
         .catch(err => {
             console.log(err)
