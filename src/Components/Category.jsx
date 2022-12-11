@@ -1,14 +1,9 @@
-const React = require('react')
-const category = require('../../models/category')
 
-const Category = (category) => {
+const Category = () => {
     return (
-        <div className="Category-dropdown">
-                {/*Category drop down button
-        
-                
-                */}   
-        </div>
+       <div>
+        <p>Categories</p>
+       </div>
     )  
 }
 
