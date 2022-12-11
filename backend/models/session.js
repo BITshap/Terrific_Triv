@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 
 // schema
 const sessionSchema = mongoose.Schema({
-    questions: [ { type: mongoose.Schema.Types.ObjectId } ],
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    questions: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Question' } ],
     score: { type: Number, required: true },
     date: { type: Date }
 })
