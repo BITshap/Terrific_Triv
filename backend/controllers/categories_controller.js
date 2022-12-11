@@ -74,7 +74,6 @@ router.delete('/:id', (req, res) => {
 })
 
 // questions controllers (if categories used)
-
 // GET /categories/:id/questions
 // sends all questions of category with matching id
 router.get('/:id/questions', (req, res) => {
