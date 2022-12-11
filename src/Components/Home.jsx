@@ -23,12 +23,9 @@ const Home = (user) => {
                 */}
             <div>
                 <Category />
-                
-                <Button>Start your Quiz!</Button>   
-                
-                
-            </div>
-            </div>       
+                <Button>Start your Quiz!</Button>
+            </div>          
+        </div>
         </div>
     )  
 }
