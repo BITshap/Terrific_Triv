@@ -10,20 +10,29 @@ User can look at previos sessions to see score, and a list of questions with the
 Each category could have a pool of questions, and each session would be a random selection of ten of those questions.
 When a session is submited after answers are selected, a new session is created in the sessions collection containing: an overall score, the date and time of the session's submission, and an array containing: each question asked, the correct answer, and the user's selected answer. It should also contain the ObjectId of the question so we could easily replicate the session if the user wants to try the exact session again.
 
-## Routes for Backend
-| Method | Path                           | Purpose                                  |
-|:-------|:-------------------------------|:-----------------------------------------|
-| GET    | /                              | Welcome message                          |
-| GET    | /users                         | Find all users                           |
-| GET    | /users/:id                     | Find specific user                       |
-| POST   | /users                         | Create new user                          |
-| PUT    | /users/:id                     | Update specific user                     |
-| DELETE | /users/:id                     | Delete specific user                     |
-| GET    | /users/:id/sessions            | Get all sessions of specific user        |
-| GET    | /users/:id/sessions/:sessionId | Get specific session of specific user    |
-| POST   | /users/:id/sessions            | Create new session of specific user      |
-| DELETE | /users/:id/sessions/:sessionId | Delete specific session of specific user |
-
+## Backend Routes
+| Method | Path                                  | Purpose                                       |
+|:-------|:--------------------------------------|:----------------------------------------------|
+| GET    | /                                     | Welcome message                               |
+| GET    | /users                                | Find all users                                |
+| GET    | /users/:id                            | Find specific user                            |
+| POST   | /users                                | Create new user                               |
+| PUT    | /users/:id                            | Update specific user                          |
+| DELETE | /users/:id                            | Delete specific user                          |
+| GET    | /users/:id/sessions                   | Get all sessions of specific user             |
+| GET    | /users/:id/sessions/:sessionId        | Get specific session of specific user         |
+| POST   | /users/:id/sessions                   | Create new session of specific user           |
+| DELETE | /users/:id/sessions/:sessionId        | Delete specific session of specific user      |
+| GET    | /categories                           | Find all categories                           |
+| GET    | /categories/:id                       | Find specific category                        |
+| POST   | /categories                           | Create new category                           |
+| PUT    | /categories/:id                       | Update specific category                      |
+| DELETE | /categories/:id                       | Delete specific category                      |
+| GET    | /categories/:id/questions             | Find all questions of specific category       |
+| GET    | /categories/:id/questions/:questionId | Find specific question of specific category   |
+| POST   | /categories/:id/questions             | Create new question of specific category      |
+| PUT    | /categories/:id/questions/:questoinId | Update specific question of specific category |
+| DELETE | /categories/:id/questions/:questoinId | Delete specific question of specific category |
 
 ## Schema Outlines
 

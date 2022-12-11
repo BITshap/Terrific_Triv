@@ -6,7 +6,6 @@
 
 // dependencies
 const router = require('express').Router()
-const category = require('../models/category')
 const Category = require('../models/category')
 const Question = require('../models/question')
 
