@@ -41,6 +41,7 @@ const Home = (user) => {
                     }
                     </div>
                 </div>
+            </div>
         </div>
 )}
 
