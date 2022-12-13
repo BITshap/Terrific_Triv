@@ -1,7 +1,12 @@
 const db = require('../../../backend/models')
 
 db.Question.create([{
+<<<<<<< HEAD:src/Components/seeders/seed-questions-biology.js
+  
+  questions: 'What is the phospholipid bilayer with embedded protiens that surrounds every cell?',
+=======
   question: 'What is the phospholipid bilayer with embedded protiens that surrounds every cell?',
+>>>>>>> f1f194107c4dcb852e227f2d4d37ea7f58e93903:src/Components/seeders/seed-questions.js
   correctAnswer: 'Cell membrane',
   incorrectAnsers: [ 
     'Cell wall',
@@ -191,6 +196,8 @@ incorrectAnsers: [
   category: ObjectId("63960b7dcd6b86a544c3a50a")
 }])
   .then(() => {
+    db.Categories.update({name: "Biology"}, {$push: {questionsId: "63960b7dcd6b86a544c3a50a" }});
+
     console.log('Seed Success!')
     process.exit()
   })
