@@ -136,22 +136,138 @@ db.Question.create([{
   ]
   },
   {
-    questions: 'What is the property of muscle tissue that refers to the fact that it will return to its normal resting state without being damaged?',
-    correctAnswer: 'Elasticity',
+    questions: 'What is the property of muscle tissue that refers to the fact that it will respond to electrical signals?',
+    correctAnswer: 'Excitability',
     incorrectAnsers: [ 
-      'Excitability',
+      'Elasticity',
      'Conductivity',
      'Contractility'
   ]
   },
- 
-{
+  {
+    questions: 'What are the building blocks of proteins?',
+    correctAnswer: 'Amino acids',
+    incorrectAnsers: [ 
+      'Whey',
+     'Neurons',
+     'Steriods'
+  ]
+  },
+  {
     questions: 'What is the medical term for a muscle cell also known as a muscle fiber?',
     correctAnswer: 'Myocyte',
     incorrectAnsers: [ 
       'Oocyte',
      'Neuron',
      'Steriod'
+  ]
+  },
+  {
+    questions: 'What is the medical term for a muscle cell also known as a muscle fiber?',
+    correctAnswer: 'Myocyte',
+    incorrectAnsers: [ 
+      'Oocyte',
+     'Neuron',
+     'Steriod'
+  ]
+  },
+  {
+    questions: 'What is a disease characterized by uncontrolled cell division?',
+    correctAnswer: 'Cancer',
+    incorrectAnsers: [ 
+      'Meiosis',
+     'Mitosis',
+     'Anemia'
+  ]
+  },
+  {
+    questions: 'What is a disease characterized by an inability to produce enough insulin to regulate blood glucose levels?',
+    correctAnswer: 'Diabetes Mellitus',
+    incorrectAnsers: [ 
+      'Juandice',
+     'Anemia',
+     'Cancer'
+  ]
+  },
+  {
+    questions: 'What is the outer portion of an organ called, for example the outer portion of a lymph node?',
+    correctAnswer: 'Cortex',
+    incorrectAnsers: [ 
+      'Medulla',
+     'Exterior',
+     'Distal'
+  ]
+  },
+  {
+    questions: 'What is the transparent tissue over the anterior of the eye?',
+    correctAnswer: 'Cornea',
+    incorrectAnsers: [ 
+      'Retina',
+     'Pupil',
+     'Lacrima'
+  ]
+  },
+  {
+    questions: 'What is the snail shaped structure in the inner ear containing hair cells?',
+    correctAnswer: 'Cochlea',
+    incorrectAnsers: [ 
+      'Auditory Ossicles',
+     'Tympanic Membrane',
+     'Coccyx'
+  ]
+  },
+  {
+    questions: 'What is the first segment of the small intestine, located between the pyloric valve of the stomach and the jejunum?',
+    correctAnswer: 'Duodenum',
+    incorrectAnsers: [ 
+      'Coccyx',
+     'Epigolittis',
+     'Sphincter'
+  ]
+  },
+  {
+    questions: 'What are the branches of a neuron that collect stimuli and transport them to the cell body?',
+    correctAnswer: 'Dendrites',
+    incorrectAnsers: [ 
+      'Axons',
+     'Neurotransmitters',
+     'Cones'
+  ]
+  },
+  {
+    questions: 'What is the innermost layer of the heart, which lines the interior of the heart chambers aand covers the valves',
+    correctAnswer: 'Endocardium',
+    incorrectAnsers: [ 
+      'Ventricle',
+     'Atrium',
+     'Myocardium'
+  ]
+  },
+{
+    questions: 'What is a condition characterized by a decrease in the number of red blood cells or an insufficent amount of hemoglogin?',
+    correctAnswer: 'Anemia',
+    incorrectAnsers: [ 
+      'Juandice',
+     'Crips',
+     'Cancer'
+  ]
+  },
+  {
+    questions: 'What is an essential molecule of the red blood cell that serves as a binding site for oxygen and carbon dioxide?',
+    correctAnswer: 'Hemoglobin',
+    incorrectAnsers: [ 
+      'Hemacrit',
+     'Insulin',
+     'Hypoxemia'
+  ]
+  },
+  {
+    questions: 'What is the triangular-shaped space inferior to the pharynx that is responsible for voice production?',
+    correctAnswer: 'Larynx',
+    incorrectAnsers: [ 
+      'Trachea',
+     'Esophogus',
+     'Throat'
   ]
   },
 ])

@@ -1,12 +1,8 @@
 const db = require('../../../backend/models')
 
 db.Question.create([{
-<<<<<<< HEAD:src/Components/seeders/seed-questions-biology.js
   
-  questions: 'What is the phospholipid bilayer with embedded protiens that surrounds every cell?',
-=======
   question: 'What is the phospholipid bilayer with embedded protiens that surrounds every cell?',
->>>>>>> f1f194107c4dcb852e227f2d4d37ea7f58e93903:src/Components/seeders/seed-questions.js
   correctAnswer: 'Cell membrane',
   incorrectAnsers: [ 
     'Cell wall',
@@ -182,6 +178,126 @@ incorrectAnsers: [
     'Carbohydrates',
    'Proteins',
    'Batteries'
+  ],
+  category: ObjectId("63960b7dcd6b86a544c3a50a")
+},
+{
+  question: 'What process has light dependent reactions and light independent reactions?',
+  correctAnswer: 'Photosyntesis',
+  incorrectAnsers: [ 
+    'Cellular Respiration',
+   'Dependent Variables',
+   'Biomedical Assay'
+  ],
+  category: ObjectId("63960b7dcd6b86a544c3a50a")
+},
+{
+  question: 'What allows large molecules such as glucose to pass through cell membranes',
+  correctAnswer: 'Protein Channels',
+  incorrectAnsers: [ 
+    'Osmosis',
+   'Diffusion',
+   'Endoplasmic Reticulum'
+  ],
+  category: ObjectId("63960b7dcd6b86a544c3a50a")
+},
+{
+  question: 'What is the process by which small molecules such as oxygen and carbon dioxide cross the cell membrane down their concentration gradient?',
+  correctAnswer: 'Diffusion',
+  incorrectAnsers: [ 
+    'Protein Channels',
+   'Osmosis',
+   'Windows'
+  ],
+  category: ObjectId("63960b7dcd6b86a544c3a50a")
+},
+{
+  question: 'What Process includes the steps Glycolysis, Krebs Cycle, and the Electron Transport Chain?',
+  correctAnswer: 'Cellular Respiration',
+  incorrectAnsers: [ 
+    'Photosyntheis',
+   'Fermentation',
+   'Light Dependent Reactions'
+  ],
+  category: ObjectId("63960b7dcd6b86a544c3a50a")
+},
+{
+  question: 'What is the name for the diffusion of WATER accross a cell membrane?',
+  correctAnswer: 'Osmosis',
+  incorrectAnsers: [ 
+    'Diffusion',
+   'Aquaducts',
+   'Thrist-trapping'
+  ],
+  category: ObjectId("63960b7dcd6b86a544c3a50a")
+},
+{
+  question: 'What are the inputs to cellular respiration?',
+  correctAnswer: 'Glucose and Oxygen',
+  incorrectAnsers: [ 
+    'Shovels and Rope',
+   'Carbon Dioxide and Sucrose',
+   'HDMI and USB'
+  ],
+  category: ObjectId("63960b7dcd6b86a544c3a50a")
+},
+{
+  question: 'What are the outputs of cellular respiration?',
+  correctAnswer: 'Water, Carbon Dioxide, and ATP',
+  incorrectAnsers: [ 
+    'Water and Sunlight',
+   'Proteins',
+   'Blood, sweat, and tears'
+  ],
+  category: ObjectId("63960b7dcd6b86a544c3a50a")
+},
+{
+  question: 'What are the inputs to Photosynthesis?',
+  correctAnswer: 'Sunlight, water, and carbon dioxide',
+  incorrectAnsers: [ 
+    'Chlorophorm',
+   'Choloroplasts',
+   'Oxygen and Water'
+  ],
+  category: ObjectId("63960b7dcd6b86a544c3a50a")
+},
+{
+  question: 'What are the outputs of Photosynthesis',
+  correctAnswer: 'Glucose and Oxygen',
+  incorrectAnsers: [ 
+    'Energy and Carbon Dioxide',
+   'Proteins and Lipids',
+   'Chloroplasts'
+  ],
+  category: ObjectId("63960b7dcd6b86a544c3a50a")
+},
+{
+  question: 'What will happen to a cell if it is placed in an isotonic solution?',
+  correctAnswer: 'It will stay the same size',
+  incorrectAnsers: [ 
+    'It will grow',
+   'It will shrienk',
+   'It will die'
+  ],
+  category: ObjectId("63960b7dcd6b86a544c3a50a")
+},
+{
+  question: 'Which organelle is found in plant cells but not in animal cells?',
+  correctAnswer: 'Chloroplast',
+  incorrectAnsers: [ 
+    'Nucleus',
+   'Ribosome',
+   'Mitochondria'
+  ],
+  category: ObjectId("63960b7dcd6b86a544c3a50a")
+},
+{
+  question: 'Which organelle is found in plant cells but not in animal cells?',
+  correctAnswer: 'Cell wall',
+  incorrectAnsers: [ 
+   'Cell Membrane',
+   'Ribosome',
+   'Mitochondria'
   ],
   category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
