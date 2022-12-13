@@ -2,6 +2,8 @@
 
 const Userdata = () => {
     return (
+        <div className="wrapper">
+        
         <div className="User-Data-Wrapper">
         <h1>Your Stats</h1>
         <p>HI test</p>
@@ -11,6 +13,7 @@ const Userdata = () => {
         <h2>{user.lastPlayed}</h2>
         <h2>{user.lastLogin}</h2>  */}
         </div> 
+        </div>
     )
    
 }
