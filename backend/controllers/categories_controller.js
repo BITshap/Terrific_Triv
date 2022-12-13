@@ -7,7 +7,6 @@ const db = require('../models')
 router.get('/', (req, res) => {
     db.Category.find()
         .then(foundCategories => {
-            console.log(foundCategories)
             res.status(200).send(JSON.stringify(foundCategories))
         })
         .catch(err => {
