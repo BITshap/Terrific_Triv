@@ -1,6 +1,4 @@
 const Quiz = () => {
-    
-
     return (
         <div>
             <p>Quizes</p>

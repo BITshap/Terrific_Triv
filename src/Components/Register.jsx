@@ -6,7 +6,6 @@ const Register = (props) => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [age, setAge] = useState('');
-
     const [emailList, setEmailList] = useState([]);
     const [errorMessage, setErrorMessage] = useState('')
 
