@@ -15,13 +15,13 @@ const Home = (user) => {
     return (
         <div className="wrapper">
             <div className="container display:flex justify-content-center margin:auto text-align-center">
-            <h1>Welcome {user.firstName} to Terrific Trivia!</h1>
+            <h1>Welcome {user.firstName} to Terrific Trivia! </h1>
             <h3>Be Prepared for some Terrifically Tricky Questions</h3>
             <nav>
                     <ul>
                         <li>
-                        <Link to="/YourData">
-                            <Button id="data" className="linky-button glow-on-hover glow-on-hover:before glow-on-hover:active glow-on-hover:active:after glow-on-hover:hover:before glow-on-hover:after glowing">Your Data</Button>
+                        <Link to="/UserData">
+                            <Button id="data" className="linky-button glow-on-hover glow-on-hover:before glow-on-hover:active glow-on-hover:active:after glow-on-hover:hover:before glow-on-hover:after glowing">User Data</Button>
                             </Link>
                         </li>
                         <li>
