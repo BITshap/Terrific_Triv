@@ -35,8 +35,6 @@ const Userdata = () => {
         </Link>
         </Card.Body>  
         </Card>
-        
-
         </div>
     )
    
