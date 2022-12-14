@@ -6,15 +6,15 @@
 
 // dependencies
 const router = require('express').Router()
-const Category = require('../models/category')
-const Question = require('../models/question')
+const db = require('../models')
 
 // GET /categories
 // sends all categories
-router.get('/', (req, ress) => {
-    Category.find()
+router.get('/', (req, res) => {
+    db.Category.find()
         .then(foundCategories => {
-            ress.status(200).send(JSON.stringify(foundCategories))
+            console.log(foundCategories)
+            res.status(200).send(JSON.stringify(foundCategories))
         })
         .catch(err => {
             res.status(404).send(err)
@@ -24,7 +24,7 @@ router.get('/', (req, ress) => {
 // GET /categories/:id
 // sends category with matching id
 router.get('/:id', (req, res) => {
-    Category.findById(req.params.id)
+    db.Category.findById(req.params.id)
         .populate('questions')
         .then(foundCategory => {
             res.status(200).send(JSON.stringify(foundCategory))
@@ -37,11 +37,7 @@ router.get('/:id', (req, res) => {
 // POST /categories
 // creates new category
 router.post('/', (req, res) => {
-<<<<<<< HEAD
-    Category.create()
-=======
-    Category.create(req.body)
->>>>>>> f1f194107c4dcb852e227f2d4d37ea7f58e93903
+    db.Category.create(req.body)
         .then(() => {
             res.status(200).send('New category successfully created')
         })
@@ -62,7 +58,7 @@ router.post('/', (req, res) => {
 // PUT /category/:id
 // updates category with matching id
 router.put('/:id', (req, res) => {
-    Category.findByIdAndUpdate(req.params.id, req.body)
+    db.Category.findByIdAndUpdate(req.params.id, req.body)
         .then(() => {
             res.status(200).status(`Category ${req.params.id} successfully updated`)
         })
@@ -74,7 +70,7 @@ router.put('/:id', (req, res) => {
 // DELETE /category/:id
 // deletes category with matching id
 router.delete('/:id', (req, res) => {
-    Category.findByIdAndDelete(req.params.id)
+    db.Category.findByIdAndDelete(req.params.id)
         .then(() => {
             res.status(200).send(`Category ${req.params.id} successfully deleted`)
         })
@@ -84,14 +80,10 @@ router.delete('/:id', (req, res) => {
 })
 
 // questions controllers (if categories used)
-<<<<<<< HEAD
-
-=======
->>>>>>> f1f194107c4dcb852e227f2d4d37ea7f58e93903
 // GET /categories/:id/questions
 // sends all questions of category with matching id
 router.get('/:id/questions', (req, res) => {
-    Question.find()
+    db.Question.find()
         .then(foundQuestions => {
             res.status(200).send(JSON.stringify(foundQuestions))
         })
@@ -103,7 +95,7 @@ router.get('/:id/questions', (req, res) => {
 // GET /categories/:id/questions/:questionId
 // sends questions with matching id from category with matching id
 router.get('/:id/questions/:questionId', (req, res) => {
-    Question.findById()
+    db.Question.findById()
         .then(foundQuestion => {
             res.status(200).send(JSON.stringify(foundQuestion))
         })
@@ -115,9 +107,9 @@ router.get('/:id/questions/:questionId', (req, res) => {
 // POST /category/:id/questions
 // creates new question in category with matching id
 router.post('/:id/questions', (req, res) => {
-    Category.findById(req.params.id)
+    db.Category.findById(req.params.id)
         .then(category => {
-            Question.create(req.body)
+            db.Question.create(req.body)
                 .then(question => {
                     category.questions.push(question.id)
                     category.save()
@@ -146,7 +138,7 @@ router.post('/:id/questions', (req, res) => {
 // PUT /category/:id/questions/:questionId
 // updates question with matching id in category with matching id
 router.put('/:id/questions/:questionId', (req, res) => {
-    Question.findByIdAndUpdate(req.params.questionId, req.body)
+    db.Question.findByIdAndUpdate(req.params.questionId, req.body)
         .then(() => {
             res.status(200).send(`Successfully updated question ${req.params.questionId} from category ${req.params.id}`)
         })
@@ -158,7 +150,7 @@ router.put('/:id/questions/:questionId', (req, res) => {
 // DELETE /category/:id/questions/:questionId
 // deletes question with matching id from category with matching id
 router.delete('/:id/questions/:questionId', (req, res) => {
-    Question.findByIdAndDelete(req.params.questionId)
+    db.Question.findByIdAndDelete(req.params.questionId)
         .then(() => {
             res.status(200).send(`Successfully deleted question ${req.params.questionId} from category ${req.params.id}`)
         })
