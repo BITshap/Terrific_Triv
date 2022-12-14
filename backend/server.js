@@ -3,6 +3,13 @@ const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, './.env') })
 const express = require('express')
 const app = express()
+const bodyParser = require('body-parser')
+
+app.use(bodyParser.json())
+
+// cors for cross origin fix
+const cors = require('cors')
+app.use(cors())
 
 // controllers
 app.use('/users', require('./controllers/users_controller'))

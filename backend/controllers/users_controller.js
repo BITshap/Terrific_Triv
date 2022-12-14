@@ -42,6 +42,7 @@ router.get('/:id', (req, res) => {
 // POST /users
 // creates a new user
 router.post('/', (req, res) => {
+    console.log(req.body)
     db.User.create(req.body)
         .then(() => {
             res.status(200).send('New user succesfully created')
