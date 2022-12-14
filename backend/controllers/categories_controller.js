@@ -1,9 +1,3 @@
-
-/*
-    NOTE: IF CATEGORIES NOT USED,
-    THIS FILE IS OBSOLETE
-*/
-
 // dependencies
 const router = require('express').Router()
 const db = require('../models')
@@ -36,6 +30,7 @@ router.get('/:id', (req, res) => {
 // POST /categories
 // creates new category
 router.post('/', (req, res) => {
+    console.log(req.body)
     db.Category.create(req.body)
         .then(() => {
             res.status(200).send('New category successfully created')

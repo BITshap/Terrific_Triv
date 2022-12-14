@@ -8,11 +8,7 @@ const userSchema = new mongoose.Schema({
     lastName: { type: String },
     email: { type: String, required: true },
     password: { type: String, required: true },
-    age: { 
-        type: Number,
-        min: [13, 'You must be at least 13 years old to sign up for Terrific Trivia!'],
-        required: true
-    },
+    age: { String },
     lastPlayed: { type: Date },
     lastLogin: { type: Date },
     overallGrade: { type: String },

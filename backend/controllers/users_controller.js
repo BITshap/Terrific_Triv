@@ -14,6 +14,18 @@ router.get('/', (req, res) => {
         })
 })
 
+// GET /users/emails
+// sends an array of the emails associated with every user
+router.get('/emails', (req, res) => {
+    db.User.find({}, 'email')
+        .then(foundEmails => {
+            res.status(200).send(JSON.stringify(foundEmails))
+        })
+        .catch(err => {
+            res.status(404).send(err)
+        })
+})
+
 // GET /users/:id
 // sends user with matching id
 router.get('/:id', (req, res) => {
