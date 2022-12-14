@@ -3,6 +3,7 @@
     text-align: center;
     display: flex;
     min-height: 100vh;
+    min-width: 100vw;
     align-items: center;
     justify-content: center;
     color: white;
@@ -13,7 +14,7 @@
   .auth-form-container, .login-form, .register-form {
     display: flex;
     flex-direction: column;
-    padding: .3em
+    padding: .3em;
   }
   
   @media screen and (min-width: 600px) {
@@ -94,14 +95,15 @@
   }
 
   .wrapper{
-    width: 100%;
+    width: 75%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 2.8em;
   }
-  
 
+  
   .glow-on-hover {
     width: 150px;
     height: 50px;
@@ -150,7 +152,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    color: #7439db;;
+    color: #7439db;
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -160,4 +162,15 @@
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+
+.user-wrapper {
+  color: #7439db;
+  min-width: 60%;
+  min-height: 75%;
+}
+
+#names {
+ font-weight: 700;
+ font-size: 2em;
 }
