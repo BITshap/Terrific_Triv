@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Login = (props) => {
+const Login = (changeUser) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
 
@@ -19,7 +19,8 @@ const Login = (props) => {
         e.preventDefault();
         
         let loginIsValid = false,
-            emailIsValid = false
+            emailIsValid = false,
+            userId
         userList.forEach(user => {
             // find email
             if (user.email === email) {
@@ -27,6 +28,7 @@ const Login = (props) => {
                 // check if password is correct
                 if (user.password === pass) {
                     loginIsValid = true
+                    userId = user.id
                 } else {
                     loginIsValid = false
                     setErrorMessage(`Password for ${user.email} is incorrect.`)
@@ -35,7 +37,7 @@ const Login = (props) => {
         })
 
         if (loginIsValid) {
-            // LOG IN
+            changeUser(userId)
         } else if (!emailIsValid) {
             setErrorMessage(`There is no account associated with ${email}, please register with the link below.`)
         }

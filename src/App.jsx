@@ -5,13 +5,18 @@ import Category from './Components/Category'
 import './App.css'
 
 function App() {
+  const [userLoggedIn, setUserLoggedIn] = useState('')
+  const changeUser = (id) => {
+      setUserLoggedIn(id)
+  }
+
   return (
     <div className="App">
       <BrowserRouter>
       <Routes>
-        <Route path="/" exact element={ <Home/> } />
-        <Route path="/YourData" element={ <UserData/> } />
-        <Route path="/Category" element={ <Category/> } />
+        <Route path="/" exact element={ <Home user={userLoggedIn} changeUser={changeUser}/> } />
+        <Route path="/YourData" element={ <UserData user={userLoggedIn}/> } />
+        <Route path="/Category" element={ <Category user={userLoggedIn}/> } />
       </Routes>
       </BrowserRouter>
     </div>

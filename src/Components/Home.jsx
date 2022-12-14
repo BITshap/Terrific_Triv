@@ -12,6 +12,11 @@ const Home = (user) => {
         setCurrentForm(formName);
     }
 
+    const [userLoggedIn, setUserLoggedIn] = useState('')
+    const changeUser = (id) => {
+        setUserLoggedIn(id)
+    }
+
     return (
         <div className="wrapper">
             <div className="container display:flex  margin:auto justify-content-center text-align-center">
@@ -37,7 +42,7 @@ const Home = (user) => {
                 <div>
                     <div>
                     {
-                        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm}/>
+                        currentForm === "login" ? <Login onFormSwitch={toggleForm} changeUser={changeUser} /> : <Register onFormSwitch={toggleForm} changeUser={changeUser}/>
                     }
                     </div>
                 </div>
