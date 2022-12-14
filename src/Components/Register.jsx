@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Register = (props) => {
     const [email, setEmail] = useState('');
@@ -7,9 +7,62 @@ const Register = (props) => {
     const [lastName, setLastName] = useState('');
     const [age, setAge] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const [emailList, setEmailList] = useState([]);
+    const [errorMessage, setErrorMessage] = useState('')
 
+    useEffect(() => {
+        // fetch array of all users' emails to check for emails that have already been used
+        fetch('http://localhost:3001/users/emails')
+            .then(response => response.json())
+            .then(resData => setEmailList(resData))
+            .catch(error => console.log(error.message))
+    })
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+        // check email to see if account already exists
+        let emailIsValid = true;
+        emailList.forEach(existingEmail => {
+            if (existingEmail === email) {
+                setErrorMessage(`${email} is already associated with a Terrific Trivia account!`)
+                emailIsValid = false;
+                // TODO: display error message and reset form
+            }
+        })
+
+        // if email is valid POST new user
+        if (emailIsValid) {
+            try {
+                let res = await fetch('http://localhost:3001/users', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        firstName: firstName,
+                        lastName: lastName,
+                        email: email,
+                        password: pass,
+                        age: age,
+                        lastPlayed: new Date(0),
+                        lastLogin: new Date(),
+                        overallGrade: 'No Session Data (YET!)',
+                        sessions: []
+                    })
+                })
+                let resJson = await res.json()
+                if (res.status === 200) {
+                    // reset field values
+                    setEmail('')
+                    setPass('')
+                    setFirstName('')
+                    setLastName('')
+                    setAge('')
+                } else {
+                    setErrorMessage(resJson)
+                }
+            } catch (error) {
+                console.log(error)
+            }
+        }
     }
 
     return (
