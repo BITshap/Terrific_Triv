@@ -6,16 +6,16 @@ import Login from "./Login"
 import Register from "./Register"
 
 
-const Home = (user) => {
+const Home = (props) => {
     const [currentForm, setCurrentForm] = useState('login');
     const toggleForm = (formName) => {
         setCurrentForm(formName);
     }
-
+    console.log(props.userIsLoggedIn)
     return (
         <div className="wrapper">
             <div className="container display:flex  margin:auto justify-content-center text-align-center">
-            <h1>Welcome {user.firstName} to Terrific Trivia!</h1>
+            <h1>Welcome to Terrific Trivia!</h1>
             <h3>Be Prepared for some Terrifically Tricky Questions</h3>
             <nav>
                     <ul>
@@ -37,12 +37,13 @@ const Home = (user) => {
                 <div>
                     <div>
                     {
-                        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm}/>
+                        !props.userIsLoggedIn ? 
+                        (currentForm === "login" ? <Login onFormSwitch={toggleForm} changeUser={props.changeUser} /> : <Register onFormSwitch={toggleForm} changeUser={props.changeUser}/>) :
+                        `Welcome ${props.user.firstName}!`
                     }
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 )
 }
