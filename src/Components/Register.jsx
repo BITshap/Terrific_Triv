@@ -8,7 +8,7 @@ const Register = (props) => {
     const [age, setAge] = useState('');
 
     const [userList, setUserList] = useState([]);
-    const [errorMessage, setErrorMessage] = useState('')
+    const [errorMessage, setErrorMessage] = useState('');
 
     useEffect(() => {
         // fetch array of all users' emails to check for emails that have already been used
@@ -28,7 +28,6 @@ const Register = (props) => {
                 if (user.email === email) {
                     setErrorMessage(`${email} is already associated with a Terrific Trivia account!`)
                     emailIsValid = false;
-                    // TODO: display error message and reset form
                 }
             })
         }
