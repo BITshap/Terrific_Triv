@@ -14,7 +14,7 @@ const Home = (user) => {
 
     return (
         <div className="wrapper">
-            <div className="container display:flex justify-content-center margin:auto text-align-center">
+            <div className="container display:flex  margin:auto justify-content-center text-align-center">
             <h1>Welcome {user.firstName} to Terrific Trivia!</h1>
             <h3>Be Prepared for some Terrifically Tricky Questions</h3>
             <nav>
