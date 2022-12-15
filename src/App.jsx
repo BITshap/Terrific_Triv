@@ -10,6 +10,7 @@ function App() {
   const [user, setUser] = useState({})
 
   const changeUser = (id) => {
+    // set user to new logged in user
     fetch(`http://localhost:3001/users/${id}`)
       .then(res => res.json())
       .then(resData => {
@@ -17,6 +18,9 @@ function App() {
         setUserIsLoggedIn(true)
       })
       .catch(err => console.log(err))
+    
+      // update last login feild of user
+      
   }
 
   return (
@@ -25,7 +29,7 @@ function App() {
       <Routes>
         <Route path="/" exact element={ <Home user={user} userIsLoggedIn={userIsLoggedIn} changeUser={changeUser} /> } />
         <Route path="/YourData" element={ <UserData user={user} /> } />
-        <Route path="/Category" element={ <Category /> } />
+        <Route path="/Category" element={ <Category user={user} /> } />
       </Routes>
       </BrowserRouter>
     </div>
