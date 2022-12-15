@@ -1,5 +1,3 @@
-const Quiz = () => {
-
 import { useState,useEffect } from "react"
 import { Button } from "react-bootstrap"
 import { Test } from "react-multiple-choice"
@@ -46,5 +44,6 @@ const Quiz = (props) => {
         </div>
     )
 }
+
 
 export default Quiz
