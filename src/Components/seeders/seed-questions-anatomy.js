@@ -274,7 +274,7 @@ db.Question.create([{
 
 
     .then(() => {
-    db.Categories.update({name: "Anatomy"}, {$push: {questionsId: "63960b51cd6b86a544c3a509" }});
+    db.Categories.update({name: "Anatomy"}, {$push: {category: "63960b51cd6b86a544c3a509" }});
       console.log('Seed Success!')
       process.exit()
     })

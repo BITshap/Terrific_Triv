@@ -73,11 +73,10 @@ router.delete('/:id', (req, res) => {
         })
 })
 
-// questions controllers (if categories used)
 // GET /categories/:id/questions
-// sends all questions of category with matching id
+// sends all questions from category with matching id
 router.get('/:id/questions', (req, res) => {
-    db.Question.find()
+    db.Question.find({ 'category._id': req.params.id })
         .then(foundQuestions => {
             res.status(200).send(JSON.stringify(foundQuestions))
         })
@@ -86,8 +85,38 @@ router.get('/:id/questions', (req, res) => {
         })
 })
 
+// GET /categories/:id/questions/get-ten
+// sends ten random questions from category with matching id
+router.get('/:id/questions/get-ten', (req, res) => {
+    // get number of questions in category
+    let questionCount = 0
+    db.Question.countDocuments({ 'category._id': req.params.id })
+        .exec(count => questionCount = count )
+    
+    // select ten random questions from category
+    let selectedQuestions = []
+    for (let i = 0; i < 10; i++) {
+        let randomNum = Math.floor(Math.random() * questionCount)
+        db.Question.findOne({ 'category._id': req.params.id }).skip(randomNum)
+            .then(foundQuestion => {
+                if (!selectedQuestions.includes(foundQuestion)) {
+                    selectedQuestions.push(foundQuestion)
+                    // send array when it contains 10 questions
+                    if (i === 9) {
+                        res.status(200).send(JSON.stringify(selectedQuestions))
+                    }
+                } else {
+                    i--
+                }
+            })
+            .catch(err => {
+                res.status(404).send(err)
+            })
+    }
+})
+
 // GET /categories/:id/questions/:questionId
-// sends questions with matching id from category with matching id
+// sends question with matching id from category with matching id
 router.get('/:id/questions/:questionId', (req, res) => {
     db.Question.findById()
         .then(foundQuestion => {
