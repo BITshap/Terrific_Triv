@@ -9,7 +9,6 @@ db.Question.create([{
    'Cholesterol',
    'Osmosis'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What are the organelles that transcribe and translate DNA into proteins in every cell?',
@@ -19,7 +18,6 @@ db.Question.create([{
    'Mitochondria',
    'Vesicles'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What is the rigid structure of mostly cellulose outside of the phospholipid bilayer surrounding plant cells?',
@@ -29,7 +27,6 @@ db.Question.create([{
    'Cholesterol',
    'Osmosis'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'Known as the powerhouse of the cell, this organelle is where cellular respiration takes place in Eukaryotes?',
@@ -39,7 +36,6 @@ db.Question.create([{
    'Golgi Apparatus',
    'Endoplasmic Reticulum'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What is the term for pluripontent cells that can self replicate or differentiate to form all different types of cells',
@@ -49,7 +45,6 @@ db.Question.create([{
    'Gametes',
    'Prokaryotes'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What organelle packages products in vesicles for transport or storage?',
@@ -59,7 +54,6 @@ db.Question.create([{
    'Ribosomes',
    'Nucleus'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
 question: 'What organelle contains the DNA in Eukaryotic cells?',
@@ -69,7 +63,6 @@ incorrectAnsers: [
  'Endoplasmic reticulum',
  'Hard Drive'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What is the process by which plantss convert sunlight into glucose?',
@@ -79,7 +72,6 @@ incorrectAnsers: [
    'Fermentation',
    'Osmosis'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What is the process by which organisms convert glucose into ATP?',
@@ -89,7 +81,6 @@ incorrectAnsers: [
    'Fermentation',
    'Osmosis'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What is the term for a fertilized egg that is a single cell that will give rise to an entire organism?',
@@ -99,7 +90,6 @@ incorrectAnsers: [
    'Prokaryote',
    'Sex Cell'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What is the process by which somatic cells duplicate themselves?',
@@ -109,7 +99,6 @@ incorrectAnsers: [
    'Cloning',
    'Differentiaiton'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What is the process by which a diploid cell creates 4 haploid cells in preparation for sexual reproduction?',
@@ -119,7 +108,6 @@ incorrectAnsers: [
    'Gametification',
    'Apoptosis'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What is the organelle in which sunlight excites pigments in the first steps of Photosynthesis?',
@@ -129,7 +117,6 @@ incorrectAnsers: [
    'Ribosome',
    'Cell Wall'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What has the reactants Oxygen and Glucose and the products Carbon Dioxide, Water, and ATP?',
@@ -139,7 +126,6 @@ incorrectAnsers: [
    'Fermentation',
    'Osmosis'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What has the reactants Water, Carbon Dioxide, and Sunlight and the products Glucose and Oxygen',
@@ -149,7 +135,6 @@ incorrectAnsers: [
    'Fermentation',
    'Osmosis'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What kind of macromolecules are enzymes?',
@@ -159,7 +144,6 @@ incorrectAnsers: [
    'Lipids',
    'Good ones'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What kind of macromolecules are broken down for quick energy and made of carbon, hydrogen, and oxygen?',
@@ -169,7 +153,6 @@ incorrectAnsers: [
    'Proteins',
    'Steroids'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What kind of macromolecules are hydrophobic and used for long term energy storage?',
@@ -179,7 +162,6 @@ incorrectAnsers: [
    'Proteins',
    'Batteries'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What process has light dependent reactions and light independent reactions?',
@@ -189,7 +171,6 @@ incorrectAnsers: [
    'Dependent Variables',
    'Biomedical Assay'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What allows large molecules such as glucose to pass through cell membranes',
@@ -199,7 +180,6 @@ incorrectAnsers: [
    'Diffusion',
    'Endoplasmic Reticulum'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What is the process by which small molecules such as oxygen and carbon dioxide cross the cell membrane down their concentration gradient?',
@@ -209,7 +189,6 @@ incorrectAnsers: [
    'Osmosis',
    'Windows'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What Process includes the steps Glycolysis, Krebs Cycle, and the Electron Transport Chain?',
@@ -219,7 +198,6 @@ incorrectAnsers: [
    'Fermentation',
    'Light Dependent Reactions'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What is the name for the diffusion of WATER accross a cell membrane?',
@@ -229,7 +207,6 @@ incorrectAnsers: [
    'Aquaducts',
    'Thrist-trapping'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What are the inputs to cellular respiration?',
@@ -239,7 +216,6 @@ incorrectAnsers: [
    'Carbon Dioxide and Sucrose',
    'HDMI and USB'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What are the outputs of cellular respiration?',
@@ -249,7 +225,6 @@ incorrectAnsers: [
    'Proteins',
    'Blood, sweat, and tears'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What are the inputs to Photosynthesis?',
@@ -259,7 +234,6 @@ incorrectAnsers: [
    'Choloroplasts',
    'Oxygen and Water'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What are the outputs of Photosynthesis',
@@ -269,7 +243,6 @@ incorrectAnsers: [
    'Proteins and Lipids',
    'Chloroplasts'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What will happen to a cell if it is placed in an isotonic solution?',
@@ -279,7 +252,6 @@ incorrectAnsers: [
    'It will shrienk',
    'It will die'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'Which organelle is found in plant cells but not in animal cells?',
@@ -289,7 +261,6 @@ incorrectAnsers: [
    'Ribosome',
    'Mitochondria'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'Which organelle is found in plant cells but not in animal cells?',
@@ -299,7 +270,6 @@ incorrectAnsers: [
    'Ribosome',
    'Mitochondria'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 },
 {
   question: 'What is the medical term for a muscle cell also known as a muscle fiber?',
@@ -309,10 +279,9 @@ incorrectAnsers: [
    'Neuron',
    'Steriod'
   ],
-  category: ObjectId("63960b7dcd6b86a544c3a50a")
 }])
   .then(() => {
-    db.Categories.update({name: "Biology"}, {$push: {questionsId: "63960b7dcd6b86a544c3a50a" }});
+    db.Categories.update({name: "Biology"}, {$push: {category: "63960b7dcd6b86a544c3a50a" }});
 
     console.log('Seed Success!')
     process.exit()

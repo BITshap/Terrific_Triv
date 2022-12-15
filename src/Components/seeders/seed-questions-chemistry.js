@@ -371,7 +371,7 @@ db.Question.create([{
   ]
   }])
     .then(() => {
-      db.Categories.update({name: "Chemistry"}, {$push: {questionsId: "63960b9ccd6b86a544c3a50b" }});
+      db.Categories.update({name: "Chemistry"}, {$push: {category: "63960b9ccd6b86a544c3a50b" }});
   
       console.log('Seed Success!')
       process.exit()
