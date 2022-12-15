@@ -22,7 +22,7 @@ const Userdata = (props) => {
         <h5>Last terrific login: {props.user.lastLogin}</h5>
         <br />
         </Card.Text>
-       <Link to="/">
+        <Link to="/">
         <Button className="linky-button glow-on-hover glow-on-hover:before glow-on-hover:active glow-on-hover:active:after glow-on-hover:hover:before glow-on-hover:after glowing">Home</Button>
         </Link>
         </Card.Body>  
