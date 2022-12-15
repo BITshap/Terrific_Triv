@@ -174,3 +174,18 @@
  font-weight: 700;
  font-size: 2em;
 }
+
+.header-grow {
+  animation: growth 2.5s;
+  animation-fill-mode: backwards;
+  font-size: 2rem;
+}
+
+@keyframes growth {
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
