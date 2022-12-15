@@ -39,7 +39,7 @@ const Home = (props) => {
                     {
                         !props.userIsLoggedIn ? 
                         (currentForm === "login" ? <Login onFormSwitch={toggleForm} changeUser={props.changeUser} /> : <Register onFormSwitch={toggleForm} changeUser={props.changeUser}/>) :
-                        `Welcome ${props.user.firstName}!`
+                        <p className="header-grow">Welcome {props.user.firstName}!</p>
                     }
                     </div>
                 </div>

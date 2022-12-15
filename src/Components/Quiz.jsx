@@ -1,3 +1,5 @@
+const Quiz = () => {
+
 import { useState,useEffect } from "react"
 import { Button } from "react-bootstrap"
 import { Test } from "react-multiple-choice"
