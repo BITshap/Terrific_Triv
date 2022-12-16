@@ -1,6 +1,5 @@
 import { useState,useEffect } from "react"
 import { Button } from "react-bootstrap"
-import { Test } from "react-multiple-choice"
 import Option from "react-multiple-choice/dist/Option"
 import Question from "react-multiple-choice/dist/Question"
 import QuestionGroup from "react-multiple-choice/dist/QuestionGroup"
