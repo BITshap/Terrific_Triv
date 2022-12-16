@@ -3,7 +3,7 @@ import { Form, Button } from "react-bootstrap"
 
 const Quiz = (props) => {
     const [questions, setQuestions] = useState([])
-    const [selectedOptions, setSelectedOptions] = useState([])
+    const [selectedOptions, setSelectedOptions] = useState(['','','','','','','','','',''])
 
     useEffect(() => {
         // get 10 random questions
@@ -12,6 +12,14 @@ const Quiz = (props) => {
             .then(resData => setQuestions(resData))
             .catch(err => console.log(err))
     })
+
+    // handle answer option selections
+    const handleSelection = (index, selection) => {
+        let tempArray = selectedOptions
+        tempArray[index] = selection
+        setSelectedOptions(tempArray)
+        console.log(selectedOptions)
+    }
 
     // handle quiz submission
     const handleSubmit = () => {
@@ -24,7 +32,7 @@ const Quiz = (props) => {
         <Form onSubmit={handleSubmit}>
             { 
                 questions.map((question, index) => {
-                    <Form.Group>
+                    <Form.Group onChange={e => handleSelection(index, e.target.value)}>
                         <Form.Label>{question.question}</Form.Label>
                             {
                                 props.question.genAnswerOrder().map((answer) => {
