@@ -21,34 +21,28 @@ const Quiz = (props) => {
     // for when use selects opetion
     // setSelectedOptions([ ...selectedOptions, newlySelectedOption ])
     return (
-        <div>
-            <p>Quizes</p>
-
-            <ul>
-                { 
-                    questions.map((question, index) => (
-                        <Form onSubmit={handleSubmit}>
-                            <Form.Group onChange={e => setSelectedOptions(selectedOptions[index])}>
-                                <Form.Label>{question.question}</Form.Label>
-                                {
-                                    props.question.genAnswerOrder().map((answer) => {
-                                        <div key={props.question._id}>
-                                            <Form.Check
-                                                type='radio'
-                                                label={answer}
-                                                value={answer}
-                                                name={question.question}
+        <Form onSubmit={handleSubmit}>
+            { 
+                questions.map((question, index) => {
+                    <Form.Group>
+                        <Form.Label>{question.question}</Form.Label>
+                            {
+                                props.question.genAnswerOrder().map((answer) => {
+                                    <div key={props.question._id}>
+                                        <Form.Check
+                                            type='radio'
+                                            label={answer}
+                                            value={answer}
+                                            name={question.question}
                                             />
-                                        </div>
-                                    })
-                                }
-                            </Form.Group>
-                            <Button onClick={handleSubmit}>Submit</Button>
-                        </Form>
-                    ))
-                }
-            </ul>
-        </div>
+                                    </div>
+                                })
+                            }
+                    </Form.Group>
+                })
+            }
+            <Button onClick={handleSubmit}>Submit</Button>
+        </Form>
     )
 }
 
