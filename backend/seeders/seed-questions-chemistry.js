@@ -5,7 +5,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b", 
   question: 'What is the term for everything in the universe that occupies space (you, the computer in front of you, your drink, and the air your breathing?',
   correctAnswer: 'Matter',
-  incorrectAnsers: [ 
+  incorrectAnswers: [ 
     'Who cares?',
    'Vaccuum',
    'The Upside Down'
@@ -15,7 +15,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the smallest division of an element that still has the same properties?',
     correctAnswer: 'Atom',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Proton',
      'Neuron',
      'Molecule'
@@ -25,7 +25,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the positively charged subatomic particle?',
     correctAnswer: 'Proton',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Neutron',
      'Electron',
      'Magnents'
@@ -35,7 +35,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the negatively charged subatomic particle?',
     correctAnswer: 'Electron',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Proton',
      'Neutron',
      'Magnentism'
@@ -45,7 +45,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the neutrally charged subatomic particle?',
     correctAnswer: 'Neutron',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Proton',
      'Electron',
      'Magnentism'
@@ -55,7 +55,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'Which subatomic particle has a negligable mass compared to the others?',
     correctAnswer: 'Neutron',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Proton',
      'Electron',
      'Isotope'
@@ -65,7 +65,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is mass number of any Isotope?',
     correctAnswer: 'Neutrons plus Protons',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Protons plus Electrons',
      'Electrons plus neutrons',
      '69 amus'
@@ -75,7 +75,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the Cosmic Speed Limit as far as we now know?',
     correctAnswer: 'The Speed of Light',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'The Speed of Sound',
      '5 mph above whats posted',
      '8 million mph'
@@ -85,7 +85,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the name for 2 atoms of the same element that have a different number of Neutrons and therefore a different mass?',
     correctAnswer: 'Isotopes',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Ions',
      'Conjoined Twins',
      'Cations'
@@ -95,7 +95,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'An atom gives away some electrons to achcieve a full valence shell. What would we now call it?',
     correctAnswer: 'Cation',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Anion',
      'Electron Defficent Isotope',
      'Sad'
@@ -105,7 +105,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'An atom recieves some electrons to achcieve a full valence shell. What would we now call it?',
     correctAnswer: 'Anion',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Cation',
      'Electron Defficent Isotope',
      'Sad'
@@ -115,7 +115,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'Where can you find the subatomic particles Neutrons and Protons?',
     correctAnswer: 'Nucleus',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Google',
      'Craigs list',
      'Electron Clouds'
@@ -125,7 +125,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'Where can you find the subatomic particles Electrons?',
     correctAnswer: 'Electron cloud orbiting the nucleus',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Google',
      'Craigs list',
      'Nucleus'
@@ -135,7 +135,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'Which subatomic particle defines an atom as a particular element?',
     correctAnswer: 'Proton',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Neutron',
      'Electron',
      'Websters'
@@ -145,7 +145,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the zero point on the Kelvin temperature scale, equivalent to -273.15 degrees Celcius?',
     correctAnswer: 'Absolute Zero',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Freezing',
      'Fahrenheit 451',
      'Pretty Cold'
@@ -155,7 +155,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is a compound that produces hydrogen ions in solution?',
     correctAnswer: 'Acid',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Base',
      'Solvent',
      'Ammonia'
@@ -165,7 +165,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the name for a positively charged particle emitted from a radioactive nucleus (identical to the nucleus of a helium atom?',
     correctAnswer: 'Aplha Particle',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Neutron',
      'Electron',
      'Positron'
@@ -175,7 +175,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the number of representative particles contained in on mole of a substance?',
     correctAnswer: 'Avagadros Number',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       '8 billion',
      'Avocados Slumber',
      'Too many to count'
@@ -185,7 +185,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is emitted from some radioactive elements that is an electron resulting from the breaking apart of neutrons?',
     correctAnswer: 'Beta Particle',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Neutron',
      'Electron',
      'Alpha Particle'
@@ -195,7 +195,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the quantity of heat needed to raise the temperature of 1g of pure water by 1 degree Celcius?',
     correctAnswer: 'Calorie',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Newton',
      'Gravitron',
      '8 units'
@@ -205,7 +205,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is a compound that produces hydroxide ions in solution?',
     correctAnswer: 'Base',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Neutron',
      'Electron',
      'Acid'
@@ -215,7 +215,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the ratio of the mass of an object to its volume?',
     correctAnswer: 'Density',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       '5 to 9',
      '9 to 5',
      'Enthalpy'
@@ -225,7 +225,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the term for energy waves that travel at the speed of light, including radio waves, infrared waves, visible light, ultraviolet waves, etc.?',
     correctAnswer: 'Electromagnetic Radiation',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Daltons',
      'Sound Waves',
      'Gamma Rays'
@@ -235,7 +235,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is a protein that acts as a biological catalyst?',
     correctAnswer: 'Enzyme',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Ester',
      'Ether',
      'Enantiomer'
@@ -245,7 +245,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the measure of the disorder of a system?',
     correctAnswer: 'Entropy',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Enthalpy',
      'Messier',
      'Chaos'
@@ -255,7 +255,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What process produces ethanol from sugars by the action of yeast or bacteria?',
     correctAnswer: 'Fermentation',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Photosynthesis',
      'Cellular Respiration',
      'Acidification'
@@ -265,7 +265,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the time required for one-half of the nuclei of a radioisotope sample to decay?',
     correctAnswer: 'Half-life',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Half-cell',
      'Half-reaction',
      '8 years'
@@ -275,7 +275,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the name for an element in Group 8A of the periodic table, with a full valance shell?',
     correctAnswer: 'Noble Gas',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Metalloid',
      'Metal',
      'Satisfied'
@@ -285,7 +285,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the unit of frequency, equal to one cylce per second?',
     correctAnswer: 'hertz',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Electromagnetic Radiation',
      'Daltons',
      'Newtons'
@@ -295,7 +295,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What kind of molecule has one side slightly negative and the other side slightly positive?',
     correctAnswer: 'Polar',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Ionic',
      'Electric',
      'Acidic'
@@ -305,7 +305,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What kind of bond has atoms that are shared unequally?',
     correctAnswer: 'Polar Covalent',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Ionic',
      'Isotopic',
      'Brotherhood'
@@ -315,7 +315,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is a quantum of light, a discrete bundle of electromagnetic energy that interacts with matter similarly to particles?',
     correctAnswer: 'Photon',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Neutron',
      'Electron',
      'Positron'
@@ -325,7 +325,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the process by which nuclei emit particles and rays?',
     correctAnswer: 'Radioactivity',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Emulsion',
      'Evolution',
      'Entropy'
@@ -335,7 +335,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is an isotope that has an unstable nuclei and undergoes radioactive decay?',
     correctAnswer: 'Radioisotope',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Positron',
      'Hydrogen',
      'Cation'
@@ -345,7 +345,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is a very large molecule formed by the covalent bonding of repeating monomers?',
     correctAnswer: 'Polymer',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Isomer',
      'Merkel Disc',
      'Polar Molecule'
@@ -355,7 +355,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is a quantum mechanical property fo electrons that may be thought of as clockwise or counterclockwise?',
     correctAnswer: 'Spin',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Time',
      'Quarks',
      'pH'
@@ -365,7 +365,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What are molecules that have atoms in the same order, but which differ in the arrangement of the atoms in space?',
     correctAnswer: 'Stereoisomers',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Isotopes',
      'Anions',
      'Quarks'
@@ -375,7 +375,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the process in which a solid changes to a gas or vapor without passing through the liquid state?',
     correctAnswer: 'Sublimation',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Sublime',
      'Evaporation',
      'Condensation'
@@ -385,7 +385,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is any substance that interferes with the hydrogen bonding between water molecules and thereby reduces surface tension(i.e. soap)?',
     correctAnswer: 'Surfactant',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Solute',
      'Solvent',
      'Titrate'
@@ -395,7 +395,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the measure of the average kinetic energy of particles in matter, which determines the direction?',
     correctAnswer: 'Proton',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Neutron',
      'Electron',
      'Websters'
@@ -405,7 +405,7 @@ db.Question.create([
   category: "63960b9ccd6b86a544c3a50b",
     question: 'What is the word for everything that is, ever has been, or ever will be?',
     correctAnswer: 'Cosmos',
-    incorrectAnsers: [ 
+    incorrectAnswers: [ 
       'Me',
      'My life',
      'My social media'

@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react"
-import { Button } from "react-bootstrap"
+import { Form, Button } from "react-bootstrap"
 
 const Quiz = (props) => {
     const [questions, setQuestions] = useState([])
@@ -15,6 +15,7 @@ const Quiz = (props) => {
 
     // handle quiz submission
     const handleSubmit = () => {
+
     }
     
     // for when use selects opetion
@@ -26,29 +27,27 @@ const Quiz = (props) => {
             <ul>
                 { 
                     questions.map((question, index) => (
-                        <div>
-                            <li key={ index }>{index + 1}: {question.question}</li>
-                            <Question quesstion={question}/>
-                        </div>
+                        <Form onSubmit={handleSubmit}>
+                            <Form.Group onChange={e => setSelectedOptions(selectedOptions[index])}>
+                                <Form.Label>{question.question}</Form.Label>
+                                {
+                                    props.question.genAnswerOrder().map((answer) => {
+                                        <div key={props.question._id}>
+                                            <Form.Check
+                                                type='radio'
+                                                label={answer}
+                                                value={answer}
+                                                name={question.question}
+                                            />
+                                        </div>
+                                    })
+                                }
+                            </Form.Group>
+                            <Button onClick={handleSubmit}>Submit</Button>
+                        </Form>
                     ))
                 }
             </ul>
-
-            {/* <Test onOptionSelect={selectedOptions => setSelectedOptions({selectedOptions})}>
-                {
-                    questions.map((question, i) => {
-                        <QuestionGroup questionNumber={i}>
-                            <Question>{question.question}</Question>
-                            {
-                                question.genAnswerOrder().map(answerOption => {
-                                    <Option value={answerOption}>{answerOption}</Option>
-                                })
-                            }
-                        </QuestionGroup>
-                    })
-                }
-            </Test> */}
-            <Button onClick={handleSubmit}>Submit</Button>
         </div>
     )
 }

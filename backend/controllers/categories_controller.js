@@ -76,7 +76,7 @@ router.delete('/:id', (req, res) => {
 // GET /categories/:id/questions
 // sends all questions from category with matching id
 router.get('/:id/questions', (req, res) => {
-    db.Question.find({ 'category._id': req.params.id })
+    db.Question.find({ 'category': req.params.id })
         .then(foundQuestions => {
             res.status(200).send(JSON.stringify(foundQuestions))
         })
@@ -89,7 +89,7 @@ router.get('/:id/questions', (req, res) => {
 // sends ten random questions from category with matching id
 router.get('/:id/questions/get-ten', (req, res) => {
     // get all questions from category
-    db.Question.find({ 'category._id': req.params.id })
+    db.Question.find({ 'category': req.params.id })
         .then(foundQuestions => {
             // find 10 random questions to send
             let questionsToSend = []
