@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 const Category = (props) => {
     const [categoryId, setCategoryId] = useState('')
-    const [categories, setCategories] = useEffect([])
+    const [categories, setCategories] = useState([])
 
     useEffect(() => {
         // fetch array of all categories
