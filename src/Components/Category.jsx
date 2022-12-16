@@ -23,6 +23,7 @@ console.log(categoryId);
     return (
         <div className="category-container">
             <h1>Categories</h1>
+            <p>Choose a subject then take a Quiz!</p>
             <DropDown options={categories} setId={ setCategoryId } />
         </div>
     )  
