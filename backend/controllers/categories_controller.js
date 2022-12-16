@@ -76,7 +76,7 @@ router.delete('/:id', (req, res) => {
 // GET /categories/:id/questions
 // sends all questions from category with matching id
 router.get('/:id/questions', (req, res) => {
-    db.Question.find({ 'category._id': req.params.id })
+    db.Question.find({ 'category': req.params.id })
         .then(foundQuestions => {
             res.status(200).send(JSON.stringify(foundQuestions))
         })
@@ -88,31 +88,21 @@ router.get('/:id/questions', (req, res) => {
 // GET /categories/:id/questions/get-ten
 // sends ten random questions from category with matching id
 router.get('/:id/questions/get-ten', (req, res) => {
-    // get number of questions in category
-    let questionCount = 0
-    db.Question.countDocuments({ 'category._id': req.params.id })
-        .exec(count => questionCount = count )
-    
-    // select ten random questions from category
-    let selectedQuestions = []
-    for (let i = 0; i < 10; i++) {
-        let randomNum = Math.floor(Math.random() * questionCount)
-        db.Question.findOne({ 'category._id': req.params.id }).skip(randomNum)
-            .then(foundQuestion => {
-                if (!selectedQuestions.includes(foundQuestion)) {
-                    selectedQuestions.push(foundQuestion)
-                    // send array when it contains 10 questions
-                    if (i === 9) {
-                        res.status(200).send(JSON.stringify(selectedQuestions))
-                    }
-                } else {
-                    i--
-                }
-            })
-            .catch(err => {
-                res.status(404).send(err)
-            })
-    }
+    // get all questions from category
+    db.Question.find({ 'category': req.params.id })
+        .then(foundQuestions => {
+            // find 10 random questions to send
+            let questionsToSend = []
+            for (let i = 0; i < 10; i++) {
+                let randomNum = Math.floor(Math.random() * foundQuestions.length)
+                questionsToSend.push(foundQuestions[randomNum])
+                foundQuestions.splice(randomNum, 1)
+            }
+            res.status(200).send(JSON.stringify(foundQuestions))
+        })
+        .catch(err => {
+            res.status(404).send(err)
+        })
 })
 
 // GET /categories/:id/questions/:questionId
