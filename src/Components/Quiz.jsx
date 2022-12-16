@@ -9,6 +9,8 @@ const Quiz = (props) => {
     const [questions, setQuestions] = useState([])
     const [selectedOptions, setSelectedOptions] = useState({})
 
+    const [userSelection, setUserSelection] = useState('')
+
     useEffect(() => {
         // get 10 random questions
         fetch(`http://localhost:3001/categories/${props.categoryId}/get-ten`)
