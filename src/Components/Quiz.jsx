@@ -8,7 +8,6 @@ import QuestionGroup from "react-multiple-choice/dist/QuestionGroup"
 const Quiz = (props) => {
     const [questions, setQuestions] = useState([])
     const [selectedOptions, setSelectedOptions] = useState({})
-
     const [userSelection, setUserSelection] = useState('')
 
     useEffect(() => {

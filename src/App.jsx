@@ -30,6 +30,7 @@ function App() {
         <Route path="/" exact element={ <Home user={user} userIsLoggedIn={userIsLoggedIn} changeUser={changeUser} /> } />
         <Route path="/YourData" element={ <UserData user={user} /> } />
         <Route path="/Category" element={ <Category user={user} /> } />
+        <Route path="/Quiz" element={ <Quiz user={user} category={category} /> } />
       </Routes>
       </BrowserRouter>
     </div>
