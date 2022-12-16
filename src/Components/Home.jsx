@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button'
-import Category from './Category'
 import Login from "./Login"
 import Register from "./Register"
 
@@ -21,14 +20,17 @@ const Home = (props) => {
                     <ul>
                         <li>
                         <Link to="/YourData">
-                            <Button id="data" className="linky-button glow-on-hover glow-on-hover:before glow-on-hover:active glow-on-hover:active:after glow-on-hover:hover:before glow-on-hover:after glowing">Your Data</Button>
-                            </Link>
+                            <Button id="data" className="linky-button glow-on-hover glow-on-hover:before glow-on-hover:active glow-on-hover:active:after glow-on-hover:hover:before glow-on-hover:after glowing">
+                                Your Data
+                            </Button>
+                        </Link>
                         </li>
                         <li>
                         <Link to="/Category">
                             <Button id="category" className="linky-button glow-on-hover glow-on-hover:before glow-on-hover:active glow-on-hover:active:after glow-on-hover:hover:before glow-on-hover:after glowing">
                             Categories
-                                </Button></Link>
+                            </Button>
+                        </Link>
                         </li>
                     </ul>
                 </nav>       

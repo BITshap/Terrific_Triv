@@ -189,3 +189,31 @@
     font-size: 2rem;
   }
 }
+
+.drop-down-container {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin: 2em;
+max-width: 100%;
+max-height: 70%;
+position: relative;
+top: 50px;
+}
+
+#button-wrap {
+  margin: 1em;
+}
+
+#selected {
+  position: relative;
+  top: 100px;
+  margin: 1em;
+  padding: 1em;
+}
+
+.category-container{
+  position: relative;
+  bottom: 100px;
+}
