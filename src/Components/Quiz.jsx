@@ -9,9 +9,12 @@ const Quiz = (props) => {
         // get 10 random questions
         fetch(`http://localhost:3001/categories/${props.categoryId}/get-ten`)
             .then(res => res.json())
-            .then(resData => setQuestions(resData))
+            .then(resData => {
+                setQuestions(resData)
+                console.log(questions)
+            })
             .catch(err => console.log(err))
-    })
+    },[])
 
     // handle answer option selections
     const handleSelection = (index, selection) => {

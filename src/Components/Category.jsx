@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import DropDown from '../Components/DropDown'
 
 const Category = (props) => {
-    const [categoryId, setCategoryId] = useState('')
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
@@ -24,7 +23,7 @@ console.log(categoryId);
         <div className="category-container">
             <h1>Categories</h1>
             <p>Choose a subject then take a Quiz!</p>
-            <DropDown options={categories} setId={ setCategoryId } />
+            <DropDown options={categories} setId={ props.setCategoryId } />
         </div>
     )  
 }
