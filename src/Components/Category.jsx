@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import DropDown from '../Components/DropDown'
 
 const Category = (props) => {
     const [categoryId, setCategoryId] = useState('')
@@ -17,11 +18,12 @@ const Category = (props) => {
         e.preventDefault()
         // set category id value to be passed to <Quiz /> as a prop
         setCategoryId(e._id)
-    }
-
+    } 
+console.log(categoryId);
     return (
-        <div>
-            <p>Categories</p>
+        <div className="category-container">
+            <h1>Categories</h1>
+            <DropDown options={categories} setId={ setCategoryId } />
         </div>
     )  
 }
