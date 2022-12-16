@@ -10,7 +10,7 @@ const Category = (props) => {
             .then(foundCategories => foundCategories.json())
             .then(categories => setCategories(categories))
             .catch(err => console.log(err))
-    })
+    }, [])
 
     // activate when dropdown menu option when selected
     const handleSelect = (e) => {

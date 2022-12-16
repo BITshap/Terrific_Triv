@@ -1,13 +1,9 @@
 import { useState,useEffect } from "react"
 import { Button } from "react-bootstrap"
-import { Test } from "react-multiple-choice"
-import Option from "react-multiple-choice/dist/Option"
-import Question from "react-multiple-choice/dist/Question"
-import QuestionGroup from "react-multiple-choice/dist/QuestionGroup"
 
 const Quiz = (props) => {
     const [questions, setQuestions] = useState([])
-    const [selectedOptions, setSelectedOptions] = useState({})
+    const [selectedOptions, setSelectedOptions] = useState([])
 
     useEffect(() => {
         // get 10 random questions
@@ -19,14 +15,26 @@ const Quiz = (props) => {
 
     // handle quiz submission
     const handleSubmit = () => {
-
     }
-
+    
+    // for when use selects opetion
+    // setSelectedOptions([ ...selectedOptions, newlySelectedOption ])
     return (
         <div>
             <p>Quizes</p>
 
-            <Test onOptionSelect={selectedOptions => setSelectedOptions({selectedOptions})}>
+            <ul>
+                { 
+                    questions.map((question, index) => (
+                        <div>
+                            <li key={ index }>{index + 1}: {question.question}</li>
+                            <Question quesstion={question}/>
+                        </div>
+                    ))
+                }
+            </ul>
+
+            {/* <Test onOptionSelect={selectedOptions => setSelectedOptions({selectedOptions})}>
                 {
                     questions.map((question, i) => {
                         <QuestionGroup questionNumber={i}>
@@ -39,7 +47,7 @@ const Quiz = (props) => {
                         </QuestionGroup>
                     })
                 }
-            </Test>
+            </Test> */}
             <Button onClick={handleSubmit}>Submit</Button>
         </div>
     )

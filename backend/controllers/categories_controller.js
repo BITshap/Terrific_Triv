@@ -91,6 +91,7 @@ router.get('/:id/questions/get-ten', (req, res) => {
     // get all questions from category
     db.Question.find({ 'category._id': req.params.id })
         .then(foundQuestions => {
+            // find 10 random questions to send
             let questionsToSend = []
             for (let i = 0; i < 10; i++) {
                 let randomNum = Math.floor(Math.random() * foundQuestions.length)
