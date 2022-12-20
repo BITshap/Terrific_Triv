@@ -98,7 +98,7 @@ router.get('/:id/questions/get-ten', (req, res) => {
                 questionsToSend.push(foundQuestions[randomNum])
                 foundQuestions.splice(randomNum, 1)
             }
-            res.status(200).send(JSON.stringify(foundQuestions))
+            res.status(200).send(JSON.stringify(questionsToSend))
         })
         .catch(err => {
             res.status(404).send(err)
