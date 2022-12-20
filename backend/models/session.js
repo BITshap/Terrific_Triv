@@ -15,7 +15,7 @@ const sessionSchema = mongoose.Schema({
             isCorrect: { type: Boolean }
         }
     ],
-    score: { type: String, required: true }, // string because score should be a percentage
+    score: { type: Number, required: true }, 
     date: { type: Date }
 })
 
