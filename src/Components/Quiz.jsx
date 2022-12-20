@@ -34,18 +34,18 @@ const Quiz = (props) => {
                 questions.map((question, index) => {
                     <Form.Group onChange={e => handleSelection(index, e.target.value)}>
                         <Form.Label>{question.question}</Form.Label>
-                            {
-                                props.question.genAnswerOrder().map((answer) => {
-                                    <div key={props.question._id}>
-                                        <Form.Check
-                                            type='radio'
-                                            label={answer}
-                                            value={answer}
-                                            name={question.question}
-                                            />
-                                    </div>
-                                })
-                            }
+                        {
+                            props.question.genAnswerOrder().map((answer) => {
+                                <div key={props.question._id}>
+                                    <Form.Check
+                                        type='radio'
+                                        label={answer}
+                                        value={answer}
+                                        name={question.question}
+                                    />
+                                </div>
+                            })
+                        }
                     </Form.Group>
                 })
             }
