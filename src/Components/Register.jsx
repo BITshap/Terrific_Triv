@@ -16,7 +16,7 @@ const Register = (props) => {
             .then(response => response.json())
             .then(resData => setUserList(resData))
             .catch(error => console.log(error.message))
-    })
+    }, [])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -62,6 +62,7 @@ const Register = (props) => {
                     props.onFormSwitch('login')
                 } else {
                     setErrorMessage(resJson)
+                    console.log(resJson)
                 }
             } catch (error) {
                 console.log(error)

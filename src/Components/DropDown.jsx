@@ -23,9 +23,11 @@ import Button from 'react-bootstrap/Button'
 
 function input(props) {
   const [value,setValue]=useState({});
+
   const handleSelect=(e)=>{
     const selection = JSON.parse(e);
     setValue(selection);
+    console.log(selection._id)
     props.setId(selection._id);
   }
 
