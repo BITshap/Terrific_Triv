@@ -13,7 +13,7 @@ const Login = (props) => {
             .then(response => response.json())
             .then(resData => setUserList(resData))
             .catch(error => console.log(error.message))
-    })
+    }, [])
 
     const handleSubmit = (e) => {
         e.preventDefault();

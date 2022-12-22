@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
     lastName: { type: String },
     email: { type: String, required: true },
     password: { type: String, required: true },
-    age: { String },
+    age: { type: String },
     lastPlayed: { type: Date },
     lastLogin: { type: Date },
     overallGrade: { type: String },

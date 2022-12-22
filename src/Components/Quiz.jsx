@@ -7,11 +7,32 @@ const Quiz = (props) => {
 
     useEffect(() => {
         // get 10 random questions
-        fetch(`http://localhost:3001/categories/${props.categoryId}/get-ten`)
+        fetch(`http://localhost:3001/categories/${props.categoryId}/questions/get-ten`)
             .then(res => res.json())
-            .then(resData => setQuestions(resData))
+            .then(resData => {
+                console.log(resData[0].incorrectAnswers[0][0][1])
+                setQuestions(resData)
+            })
             .catch(err => console.log(err))
-    })
+    }, [])
+
+    // shuffle answer options
+    const genAnswerOrder = (inputArray) => {
+        let answerArray = [...inputArray]
+
+        // shuffle answerArray using Frisher-Yates method
+        let currentIndex = answerArray.length
+        let randomIndex
+
+        while (currentIndex != 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex)
+            currentIndex--
+            [answerArray[currentIndex], answerArray[randomIndex]] = [answerArray[randomIndex], answerArray[currentIndex]]
+        }
+
+        // return array of all answer options in random order
+        return answerArray
+    }
 
     // handle answer option selections
     const handleSelection = (index, selection) => {
@@ -34,7 +55,7 @@ const Quiz = (props) => {
                 question: questions[i].question,
                 correctAnswer: questions[i].correctAnswer,
                 selectedAnswer: selectedOptions[i],
-                isCorrect: selectedAnswer === correctAnswer
+                isCorrect: selectedOptions[i] === questions[i].correctAnswer
             })
             if (questions[i].correctAnswer === selectedOptions[i]) {
                 score++
@@ -66,19 +87,23 @@ const Quiz = (props) => {
         <Form onSubmit={handleSubmit}>
             { 
                 questions.map((question, index) => {
-                    <Form.Group onChange={e => handleSelection(index, e.target.value)}>
-                        <Form.Label>{question.question}</Form.Label>
-                        {
-                            props.question.genAnswerOrder().map((answer) => {
-                                <Form.Check
-                                    type='radio'
-                                    label={answer}
-                                    value={answer}
-                                    name={question.question}
-                                />
-                            })
-                        }
-                    </Form.Group>
+                    return (
+                        <Form.Group onChange={e => handleSelection(index, e.target.value)}>
+                            <Form.Label>{question.question}</Form.Label>
+                            {
+                                genAnswerOrder([question.correctAnswer, question.incorrectAnswers[0][0][1], question.incorrectAnswers[0][0][2], question.incorrectAnswers[0][0][3]]).map((answer) => {
+                                    return (
+                                        <Form.Check
+                                            type='radio'
+                                            label={answer}
+                                            value={answer}
+                                            name={question.question}
+                                        />
+                                    )
+                                })
+                            }
+                        </Form.Group>
+                    )
                 })
             }
             <Button onClick={handleSubmit}>Submit</Button>
