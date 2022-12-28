@@ -98,6 +98,7 @@
     width: 75%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-right: 2.8em;
@@ -170,6 +171,12 @@
   min-height: 75%;
 }
 
+.quiz-wrapper {
+  color: #7439db;
+  min-width: 60%;
+  min-height: 75%;
+}
+
 #names {
  font-weight: 700;
  font-size: 2em;
@@ -214,6 +221,11 @@ top: 50px;
 }
 
 .category-container{
+  position: relative;
+  bottom: 100px;
+}
+
+.session-container{
   position: relative;
   bottom: 100px;
 }

@@ -50,7 +50,7 @@ router.post('/', (req, res) => {
         .catch(err => {
             if (err && err.name == 'ValidationError') {
                 let message = 'Validation Error'
-                for(var field in err.errors) {
+                for (var field in err.errors) {
                     message += `${field} was ${err.errors[field].value}. `
                     message += `${err.errors[field].message}`
                 }
@@ -65,7 +65,7 @@ router.post('/', (req, res) => {
 // updates a user with matching id
 router.put('/:id', (req, res) => {
     db.User.findByIdAndUpdate(req.params.id, req.body)
-        .then( () => {
+        .then(() => {
             res.status(200).send(`User ${req.params.id} successfully updated`)
         })
         .catch(err => {
@@ -79,54 +79,6 @@ router.delete('/:id', (req, res) => {
     db.User.findByIdAndDelete(req.params.id)
         .then(() => {
             res.status(200).send(`User ${req.params.id} successfully deleted`)
-        })
-        .catch(err => {
-            res.status(404).send(err)
-        })
-})
-
-// sesssions controllers
-
-// GET /users/:id/sessions/:sessionId
-// sends session with matching id from user with matching id
-router.get('/:id/sessions/:sessionId', (req, res) => {
-    db.Session.findById(req.params.sessionId)
-        .then(foundSession => {
-            res.status(200).send(JSON.stringify(foundSession))
-        })
-        .catch(err => {
-            res.status(404).send(err)
-        })
-})
-
-// POST /users/:id/sessions
-// creates a new session for a specific user
-router.post('/:id/sessions', (req, res) => {
-    db.User.findById(req.params.id)
-        .then(user => {
-            db.Session.create(req.body)
-                .then(session => {
-                    user.sessions.push(session.id)
-                    user.save()
-                        .then(() => {
-                            res.status(200).send(`New session successfully created for user ${req.params.id}`)
-                        })
-                })
-                .catch(err => {
-                    res.status(404).send(err)
-                })
-        })
-        .catch(err => {
-            res.status(404).send(err)
-        })
-})
-
-// DELETE /users/:id/sessions/:sessionId
-// deletes a session from a user's sessions
-router.delete('/:id/sessions/:sessionId', (req, res) => {
-    db.Session.findByIdAndDelete(req.params.sessionId)
-        .then(() => {
-            res.status(200).send(`Session ${req.params.sessionId} successfully deleted from user ${req.params.id}`)
         })
         .catch(err => {
             res.status(404).send(err)

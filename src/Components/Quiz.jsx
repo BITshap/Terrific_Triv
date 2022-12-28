@@ -1,9 +1,13 @@
-import { useState,useEffect } from "react"
-import { Form, Button } from "react-bootstrap"
+import { useState, useEffect } from "react";
+import { Form, Button } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
+import Card from 'react-bootstrap/Card';
+import Home from "./Home";
 
 const Quiz = (props) => {
     const [questions, setQuestions] = useState([])
-    const [selectedOptions, setSelectedOptions] = useState(['','','','','','','','','',''])
+    const [selectedOptions, setSelectedOptions] = useState(['', '', '', '', '', '', '', '', '', ''])
+    const navigate = useNavigate();
 
     useEffect(() => {
         // get 10 random questions
@@ -64,9 +68,9 @@ const Quiz = (props) => {
 
         // create new session and populate with data from quiz
         try {
-            let res = await fetch(`http://localhost:3001/users/${props.user._id}/sessions`, {
+            let res = await fetch(`http://localhost:3001/session/${props.user._id}`, {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     user: props.user._id,
                     questions: submittedQuestions,
@@ -74,41 +78,53 @@ const Quiz = (props) => {
                     date: new Date()
                 })
             })
-            let resJson = await res.text()
+            //let resJson = await res.text()
             if (res.status === 200) {
                 // TODO: show result page
+                console.log("Sessions sucessfully saved!");
+                navigate("/");
             }
         } catch (error) {
-            console.log(error)
-        }
+    console.log(error)
+}
     }
-    
-    return (
+
+return (
+    <div className="quiz-wrapper">
         <Form onSubmit={handleSubmit}>
-            { 
+            {
                 questions.map((question, index) => {
                     return (
-                        <Form.Group onChange={e => handleSelection(index, e.target.value)}>
-                            <Form.Label>{question.question}</Form.Label>
-                            {
-                                genAnswerOrder([question.correctAnswer, question.incorrectAnswers[0][0][1], question.incorrectAnswers[0][0][2], question.incorrectAnswers[0][0][3]]).map((answer) => {
-                                    return (
-                                        <Form.Check
-                                            type='radio'
-                                            label={answer}
-                                            value={answer}
-                                            name={question.question}
-                                        />
-                                    )
-                                })
-                            }
+                        <Form.Group key={'form_' + question._id} onChange={e => handleSelection(index, e.target.value)}>
+                            <Card key={'card_' + question._id} className='card'>
+                                <Card.Header id="names">{question.question}</Card.Header>
+                                <Card.Body>
+                                    <br />
+                                    {
+                                        genAnswerOrder([question.correctAnswer, question.incorrectAnswers[0][0][1], question.incorrectAnswers[0][0][2], question.incorrectAnswers[0][0][3]]).map((answer) => {
+                                            return (
+                                                <Form.Check className='card' style={{ textalign: 'left' }}
+                                                    key={answer + '_' + index.toString()}
+                                                    type='radio'
+                                                    label={answer}
+                                                    value={answer}
+                                                    name={question.question}
+                                                />
+                                            )
+                                        })
+                                    }
+                                </Card.Body>
+                            </Card>
                         </Form.Group>
                     )
                 })
             }
-            <Button onClick={handleSubmit}>Submit</Button>
+            <Link to="/">
+                <Button className="linky-button glow-on-hover glow-on-hover:before glow-on-hover:active glow-on-hover:active:after glow-on-hover:hover:before glow-on-hover:after glowing" onClick={handleSubmit}>Submit</Button>
+            </Link>
         </Form>
-    )
+    </div>
+)
 }
 
 export default Quiz

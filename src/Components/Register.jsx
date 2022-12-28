@@ -20,7 +20,7 @@ const Register = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         // check email to see if account already exists
         let emailIsValid = true;
         if (userList.length > 0) {
@@ -37,7 +37,7 @@ const Register = (props) => {
             try {
                 let res = await fetch('http://localhost:3001/users', {
                     method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         "firstName": firstName,
                         "lastName": lastName,
