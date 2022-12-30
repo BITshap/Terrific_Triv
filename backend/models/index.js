@@ -1,7 +1,8 @@
 // dependencies
 const mongoose = require('mongoose')
+mongoose.set('strictQuery', false);
 const path = require('path')
-require('dotenv').config()
+require('dotenv').config({ path: path.resolve(__dirname, '../../.env') })
 
 // connect to database
 mongoose.connect(process.env.MONGO_URI, {

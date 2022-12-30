@@ -1,6 +1,6 @@
 // dependencies
 const path = require('path')
-require('dotenv').config()
+require('dotenv').config({ path: path.resolve(__dirname, './.env') })
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -14,6 +14,7 @@ app.use(cors())
 // controllers
 app.use('/users', require('./controllers/users_controller'))
 app.use('/categories', require('./controllers/categories_controller'))
+app.use('/session', require('./controllers/session_controller'))
 app.use('/seed', require('./controllers/seed_controller'))
 
 // routes

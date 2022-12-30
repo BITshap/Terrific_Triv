@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import DropDown from '../Components/DropDown'
+import CatDropDown from './CatDropDown'
 
 const Category = (props) => {
     const [categories, setCategories] = useState([])
@@ -15,9 +15,9 @@ const Category = (props) => {
     return (
         <div className="category-container">
             <h1>Categories</h1>
-            <DropDown options={categories} setId={ props.changeCategoryId } />
+            <CatDropDown options={categories} setId={props.changeCategoryId} />
         </div>
-    )  
+    )
 }
 
 export default Category
