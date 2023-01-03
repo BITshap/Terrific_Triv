@@ -6,7 +6,7 @@ const Category = (props) => {
 
     useEffect(() => {
         // fetch array of all categories
-        fetch('http://localhost:3001/categories')
+        fetch('https://terrific-triv-be.herokuapp.com/categories')
             .then(foundCategories => foundCategories.json())
             .then(categories => setCategories(categories))
             .catch(err => console.log(err))

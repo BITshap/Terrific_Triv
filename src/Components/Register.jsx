@@ -35,7 +35,7 @@ const Register = (props) => {
         // if email is valid POST new user
         if (emailIsValid) {
             try {
-                let res = await fetch('http://localhost:3001/users', {
+                let res = await fetch('https://terrific-triv-be.herokuapp.com/users', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({

@@ -8,7 +8,7 @@ const Session = (props) => {
         // fetch array of all sessions
         console.log(props)
         console.log(props.user._id)
-        fetch(`http://localhost:3001/session/${props.user._id}`)
+        fetch(`https://terrific-triv-be.herokuapp.com/session/${props.user._id}`)
             .then(foundSessions => foundSessions.json())
             .then(sessions => setSessions(sessions))
             .catch(err => console.log(err))

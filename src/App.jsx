@@ -20,7 +20,7 @@ function App() {
 
   const changeUser = (id) => {
     // set user to new logged in user
-    fetch(`http://localhost:3001/users/${id}`)
+    fetch(`https://terrific-triv-be.herokuapp.com/users/${id}`)
       .then(res => res.json())
       .then(resData => {
         setUser(resData)
