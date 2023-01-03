@@ -11,7 +11,7 @@ const Quiz = (props) => {
 
     useEffect(() => {
         // get 10 random questions
-        fetch(`http://localhost:3001/categories/${props.categoryId}/questions/get-ten`)
+        fetch(`https://terrific-triv-be.herokuapp.com/categories/${props.categoryId}/questions/get-ten`)
             .then(res => res.json())
             .then(resData => {
                 console.log(resData[0].incorrectAnswers[0][0][1])
@@ -68,7 +68,7 @@ const Quiz = (props) => {
 
         // create new session and populate with data from quiz
         try {
-            let res = await fetch(`http://localhost:3001/session/${props.user._id}`, {
+            let res = await fetch(`https://terrific-triv-be.herokuapp.com/session/${props.user._id}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

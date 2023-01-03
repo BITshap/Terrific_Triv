@@ -11,7 +11,7 @@ const QuizData = (props) => {
 
     useEffect(() => {
         // get session data
-        fetch(`http://localhost:3001/session/${props.user._id}/${props.sessionId}`)
+        fetch(`https://terrific-triv-be.herokuapp.com/session/${props.user._id}/${props.sessionId}`)
             .then(res => res.json())
             .then(resData => {
                 console.log(resData)
