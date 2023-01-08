@@ -1,6 +1,7 @@
 // dependencies
 const path = require('path')
-require('dotenv').config({ path: path.resolve(__dirname, './.env') })
+//require('dotenv').config({ path: path.resolve(__dirname, './.env') })
+//require('dotenv').config()
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -27,6 +28,6 @@ app.get('*', (req, res) => {
 })
 
 // listen for connection to server
-app.listen(process.env.BACKEND_PORT, () => {
-    console.log(`Server listening on ${process.env.BACKEND_PORT}`)
+app.listen(process.env.PORT, () => {
+    console.log(`Server listening on ${process.env.PORT}`)
 })
