@@ -12,7 +12,7 @@ const Register = (props) => {
 
     useEffect(() => {
         // fetch array of all users' emails to check for emails that have already been used
-        fetch('http://localhost:3001/users/loginInfo')
+        fetch('https://terrific-triv-be.herokuapp.com/users/loginInfo')
             .then(response => response.json())
             .then(resData => setUserList(resData))
             .catch(error => console.log(error.message))
