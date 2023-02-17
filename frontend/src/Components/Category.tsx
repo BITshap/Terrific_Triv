@@ -1,5 +1,6 @@
+import React from "react"
 import { useEffect, useState } from "react"
-import DropDown from '../Components/DropDown'
+import DropDown from './DropDown'
 
 const Category = (props) => {
     const [categories, setCategories] = useState([])

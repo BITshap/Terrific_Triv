@@ -21,12 +21,14 @@ import Button from 'react-bootstrap/Button'
     )
 } */
 
-function input(props) {
+function input(props:any) {
   const [value,setValue]=useState({});
+  const [name,setName]=useState('');
 
-  const handleSelect=(e)=>{
+  const handleSelect=(e:any)=>{
     const selection = JSON.parse(e);
     setValue(selection);
+    setName(selection.name);
     console.log(selection._id)
     props.setId(selection._id);
   }
@@ -38,7 +40,7 @@ function input(props) {
         title="Options"
         onSelect={ (e) => handleSelect(e)}
       >
-            {props.options.map((option, index) => (
+            {props.options.map((option:any, index:any) => (
                 <div>
                     <Dropdown.Item style={{color:"purple", textAlign:"center"}} eventKey={ JSON.stringify(option) }>{ option.name }</Dropdown.Item>
                     {index === props.options.length - 1 ? null : <Dropdown.Divider />}
@@ -47,7 +49,7 @@ function input(props) {
       </DropdownButton>
       </div>
       <div id="selected">
-      <h4>Selected Subject: {value.name}</h4>
+      <h4>Selected Subject: {name}</h4>
       <Link to="/Quiz">
       <Button className="linky-button glow-on-hover glow-on-hover:before glow-on-hover:active glow-on-hover:active:after glow-on-hover:hover:before glow-on-hover:after glowing">Take Your Quiz</Button>
       </Link>

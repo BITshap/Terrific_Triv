@@ -5,6 +5,7 @@ import Category from './Components/Category'
 import Quiz from './Components/Quiz'
 import './App.css'
 import { useState } from 'react'
+import React from 'react'
 
 function App() {
   const [userIsLoggedIn, setUserIsLoggedIn] = useState(false)
@@ -31,7 +32,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Routes>
-        <Route path="/" exact element={ <Home user={user} userIsLoggedIn={userIsLoggedIn} changeUser={changeUser} /> } />
+        <Route path="/" element={ <Home user={user} userIsLoggedIn={userIsLoggedIn} changeUser={changeUser} /> } />
         <Route path="/YourData" element={ <UserData user={user} /> } />
         <Route path="/Category" element={ <Category user={user} changeCategoryId={changeCategoryId}/> } />
         <Route path="/Quiz" element={ <Quiz user={user} categoryId={categoryId} /> } />

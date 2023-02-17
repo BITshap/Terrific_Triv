@@ -1,10 +1,11 @@
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
-import Home from '../Components/Home'
+import Home from './Home'
 import {Link} from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import React from 'react'
 
-const Userdata = (props) => {
+const Userdata = (props:any) => {
 
     return (
         <div className="user-wrapper">
